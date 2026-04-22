@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import '../assets/styles/Contact.scss';
-// import emailjs from '@emailjs/browser';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
@@ -24,37 +23,19 @@ function Contact() {
     setNameError(name === '');
     setEmailError(email === '');
     setMessageError(message === '');
-
-    /* Uncomment below if you want to enable the emailJS */
-
-    // if (name !== '' && email !== '' && message !== '') {
-    //   var templateParams = {
-    //     name: name,
-    //     email: email,
-    //     message: message
-    //   };
-
-    //   console.log(templateParams);
-    //   emailjs.send('service_id', 'template_id', templateParams, 'api_key').then(
-    //     (response) => {
-    //       console.log('SUCCESS!', response.status, response.text);
-    //     },
-    //     (error) => {
-    //       console.log('FAILED...', error);
-    //     },
-    //   );
-    //   setName('');
-    //   setEmail('');
-    //   setMessage('');
-    // }
   };
 
   return (
     <div id="contact">
       <div className="items-container">
         <div className="contact_wrapper">
-          <h1>Contact Me</h1>
-          <p>Got a project waiting to be realized? Let's collaborate and make it happen!</p>
+          <h1>Me Contacter</h1>
+          <p>Un projet à réaliser ? Collaborons ensemble pour le concrétiser !</p>
+          <div className="contact-info">
+            <p>📧 erwnoubda_tech@icloud.com</p>
+            <p>📱 +226 66 48 89 28 / 51 63 05 46</p>
+            <p>📍 Ouagadougou, Burkina Faso</p>
+          </div>
           <Box
             ref={form}
             component="form"
@@ -66,33 +47,33 @@ function Contact() {
               <TextField
                 required
                 id="outlined-required"
-                label="Your Name"
-                placeholder="What's your name?"
+                label="Votre Nom"
+                placeholder="Comment vous appelez-vous ?"
                 value={name}
                 onChange={(e) => {
                   setName(e.target.value);
                 }}
                 error={nameError}
-                helperText={nameError ? "Please enter your name" : ""}
+                helperText={nameError ? "Veuillez entrer votre nom" : ""}
               />
               <TextField
                 required
-                id="outlined-required"
-                label="Email / Phone"
-                placeholder="How can I reach you?"
+                id="outlined-required-email"
+                label="Email / Téléphone"
+                placeholder="Comment puis-je vous joindre ?"
                 value={email}
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
                 error={emailError}
-                helperText={emailError ? "Please enter your email or phone number" : ""}
+                helperText={emailError ? "Veuillez entrer votre email ou numéro de téléphone" : ""}
               />
             </div>
             <TextField
               required
               id="outlined-multiline-static"
               label="Message"
-              placeholder="Send me any inquiries or questions"
+              placeholder="Envoyez-moi vos questions ou demandes"
               multiline
               rows={10}
               className="body-form"
@@ -101,10 +82,10 @@ function Contact() {
                 setMessage(e.target.value);
               }}
               error={messageError}
-              helperText={messageError ? "Please enter the message" : ""}
+              helperText={messageError ? "Veuillez entrer votre message" : ""}
             />
             <Button variant="contained" endIcon={<SendIcon />} onClick={sendEmail}>
-              Send
+              Envoyer
             </Button>
           </Box>
         </div>

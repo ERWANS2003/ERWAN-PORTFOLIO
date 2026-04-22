@@ -1,58 +1,59 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faLaravel, faPython } from '@fortawesome/free-brands-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
 const labelsFirst = [
     "React",
-    "TypeScript",
+    "Laravel",
     "JavaScript",
+    "PHP",
     "HTML5",
     "CSS3",
     "SASS",
-    "Flask",
-    "Python",
-    "SQL",
-    "PostgreSQL",
-    "Postman"
 ];
 
 const labelsSecond = [
-    "Git",
-    "GitHub Actions",
-    "Docker",
-    "AWS",
-    "Azure",
-    "Linux",
-    "Snowflake",
-    "Pandas",
-    "Selenium",
+    "Python",
+    "Java",
+    "C/C++",
+    "MySQL",
+    "PostgreSQL",
+    "SQL",
 ];
 
 const labelsThird = [
-    "OpenAI",
-    "Groq",
-    "LangChain",
-    "Qdrant",
-    "Hugging Face",
-    "LlamaIndex",
-    "Streamlit",
+    "Git",
+    "GitHub",
+    "Windows",
+    "Linux",
+    "UML",
+    "Algorithmique",
+];
+
+const labelsFourth = [
+    "Claude",
+    "OpenAI / ChatGPT",
+    "Gemini",
+    "Grok",
+    "GitHub Copilot",
+    "Prompt Engineering",
 ];
 
 function Expertise() {
     return (
     <div className="container" id="expertise">
         <div className="skills-container">
-            <h1>Expertise</h1>
+            <h1>Compétences</h1>
             <div className="skills-grid">
                 <div className="skill">
                     <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>Full Stack Web Development</h3>
-                    <p>I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.</p>
+                    <h3>Développement Web Full Stack</h3>
+                    <p>Je conçois et développe des applications web complètes, du frontend avec React au backend avec Laravel. Je maîtrise le cycle complet de développement logiciel, de l'analyse des besoins à la mise en production.</p>
                     <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
+                        <span className="chip-title">Stack technique :</span>
                         {labelsFirst.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
@@ -60,11 +61,11 @@ function Expertise() {
                 </div>
 
                 <div className="skill">
-                    <FontAwesomeIcon icon={faDocker} size="3x"/>
-                    <h3>DevOps & Automation</h3>
-                    <p>Once the application is built, I help clients set up DevOps testing, CI/CD pipelines, and deployment automation to support the successful Go-Live.</p>
+                    <FontAwesomeIcon icon={faLaravel} size="3x"/>
+                    <h3>Programmation & Bases de données</h3>
+                    <p>Solide maîtrise de plusieurs langages de programmation et de la gestion de bases de données relationnelles. Je conçois des architectures optimisées et scalables pour des applications performantes.</p>
                     <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
+                        <span className="chip-title">Stack technique :</span>
                         {labelsSecond.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
@@ -73,11 +74,23 @@ function Expertise() {
 
                 <div className="skill">
                     <FontAwesomeIcon icon={faPython} size="3x"/>
-                    <h3>GenAI & LLM</h3>
-                    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
+                    <h3>Outils & Méthodologies</h3>
+                    <p>Je maîtrise les outils de versioning, les environnements de développement et les méthodologies de gestion de projet. Mon approche rigoureuse garantit un code propre, documenté et maintenable.</p>
                     <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
+                        <span className="chip-title">Stack technique :</span>
                         {labelsThird.map((label, index) => (
+                            <Chip key={index} className='chip' label={label} />
+                        ))}
+                    </div>
+                </div>
+
+                <div className="skill">
+                    <FontAwesomeIcon icon={faPython} size="3x"/>
+                    <h3>Intelligence Artificielle</h3>
+                    <p>J'intègre les outils d'IA générative dans mon flux de travail pour accélérer le développement, optimiser le code et résoudre des problèmes complexes. Je maîtrise le prompt engineering et l'utilisation des principaux modèles de langage.</p>
+                    <div className="flex-chips">
+                        <span className="chip-title">Pile technologique :</span>
+                        {labelsFourth.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>
