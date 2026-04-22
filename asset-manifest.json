@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ERWAN-PORTFOLIO/static/css/main.02875d67.css",
-    "main.js": "/ERWAN-PORTFOLIO/static/js/main.701c753e.js",
+    "main.js": "/ERWAN-PORTFOLIO/static/js/main.a18488da.js",
     "static/js/453.b05d8aa5.chunk.js": "/ERWAN-PORTFOLIO/static/js/453.b05d8aa5.chunk.js",
     "static/media/project_hotel.png": "/ERWAN-PORTFOLIO/static/media/project_hotel.1361295552e589b4a940.png",
     "static/media/bg-light.png": "/ERWAN-PORTFOLIO/static/media/bg-light.bac0efb485244a522981.png",
@@ -11,11 +11,11 @@
     "static/media/bg-dark.png": "/ERWAN-PORTFOLIO/static/media/bg-dark.f420c6b8458af72de935.png",
     "index.html": "/ERWAN-PORTFOLIO/index.html",
     "main.02875d67.css.map": "/ERWAN-PORTFOLIO/static/css/main.02875d67.css.map",
-    "main.701c753e.js.map": "/ERWAN-PORTFOLIO/static/js/main.701c753e.js.map",
+    "main.a18488da.js.map": "/ERWAN-PORTFOLIO/static/js/main.a18488da.js.map",
     "453.b05d8aa5.chunk.js.map": "/ERWAN-PORTFOLIO/static/js/453.b05d8aa5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.02875d67.css",
-    "static/js/main.701c753e.js"
+    "static/js/main.a18488da.js"
   ]
 }
