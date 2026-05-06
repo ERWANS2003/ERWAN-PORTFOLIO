@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ERWAN-PORTFOLIO/static/css/main.762af20b.css",
-    "main.js": "/ERWAN-PORTFOLIO/static/js/main.43efcf20.js",
+    "main.css": "/ERWAN-PORTFOLIO/static/css/main.1906905f.css",
+    "main.js": "/ERWAN-PORTFOLIO/static/js/main.8be6da46.js",
     "static/js/453.b05d8aa5.chunk.js": "/ERWAN-PORTFOLIO/static/js/453.b05d8aa5.chunk.js",
     "static/media/project_indaba.png": "/ERWAN-PORTFOLIO/static/media/project_indaba.f1e678162cac2a3ec775.png",
     "static/media/project_hotel.png": "/ERWAN-PORTFOLIO/static/media/project_hotel.1361295552e589b4a940.png",
@@ -12,12 +12,12 @@
     "static/media/bg-dark.png": "/ERWAN-PORTFOLIO/static/media/bg-dark.f420c6b8458af72de935.png",
     "static/media/Blue and Gray Simple Professional CV Resume (4) (1).pdf": "/ERWAN-PORTFOLIO/static/media/Blue and Gray Simple Professional CV Resume (4) (1).c9810339eb5eaff2bfe2.pdf",
     "index.html": "/ERWAN-PORTFOLIO/index.html",
-    "main.762af20b.css.map": "/ERWAN-PORTFOLIO/static/css/main.762af20b.css.map",
-    "main.43efcf20.js.map": "/ERWAN-PORTFOLIO/static/js/main.43efcf20.js.map",
+    "main.1906905f.css.map": "/ERWAN-PORTFOLIO/static/css/main.1906905f.css.map",
+    "main.8be6da46.js.map": "/ERWAN-PORTFOLIO/static/js/main.8be6da46.js.map",
     "453.b05d8aa5.chunk.js.map": "/ERWAN-PORTFOLIO/static/js/453.b05d8aa5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.762af20b.css",
-    "static/js/main.43efcf20.js"
+    "static/css/main.1906905f.css",
+    "static/js/main.8be6da46.js"
   ]
 }
