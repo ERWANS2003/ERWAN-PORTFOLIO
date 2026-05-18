@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/ERWAN-PORTFOLIO/static/css/main.1906905f.css",
-    "main.js": "/ERWAN-PORTFOLIO/static/js/main.8be6da46.js",
-    "static/js/453.b05d8aa5.chunk.js": "/ERWAN-PORTFOLIO/static/js/453.b05d8aa5.chunk.js",
-    "static/media/project_indaba.png": "/ERWAN-PORTFOLIO/static/media/project_indaba.f1e678162cac2a3ec775.png",
-    "static/media/project_hotel.png": "/ERWAN-PORTFOLIO/static/media/project_hotel.1361295552e589b4a940.png",
+    "main.css": "/ERWAN-PORTFOLIO/static/css/main.35083313.css",
+    "main.js": "/ERWAN-PORTFOLIO/static/js/main.4444cee3.js",
+    "static/js/453.e7f01505.chunk.js": "/ERWAN-PORTFOLIO/static/js/453.e7f01505.chunk.js",
+    "static/media/mock04.png": "/ERWAN-PORTFOLIO/static/media/mock04.f7b5679efade992a078c.png",
+    "static/media/avatar_erwan.png": "/ERWAN-PORTFOLIO/static/media/avatar_erwan.f57a2a19d5fdfc1bd57b.png",
     "static/media/bg-light.png": "/ERWAN-PORTFOLIO/static/media/bg-light.bac0efb485244a522981.png",
-    "static/media/project_pdi.png": "/ERWAN-PORTFOLIO/static/media/project_pdi.e0d21b56ab763aab3b7a.png",
-    "static/media/project_patronymes.png": "/ERWAN-PORTFOLIO/static/media/project_patronymes.019f6192fca12ea0cb3e.png",
-    "static/media/avatar_erwan.png": "/ERWAN-PORTFOLIO/static/media/avatar_erwan.2dd04fd9007872b818f0.png",
-    "static/media/bg-dark.png": "/ERWAN-PORTFOLIO/static/media/bg-dark.f420c6b8458af72de935.png",
-    "static/media/Blue and Gray Simple Professional CV Resume (4) (1).pdf": "/ERWAN-PORTFOLIO/static/media/Blue and Gray Simple Professional CV Resume (4) (1).c9810339eb5eaff2bfe2.pdf",
+    "static/media/mock01.png": "/ERWAN-PORTFOLIO/static/media/mock01.61bd486a54bf6e17ee5a.png",
+    "static/media/mock02.png": "/ERWAN-PORTFOLIO/static/media/mock02.bced48ae9cdda3acf1a3.png",
+    "static/media/mock03.png": "/ERWAN-PORTFOLIO/static/media/mock03.a4600719e0b5d2a3155b.png",
+    "static/media/CV Erwan OUBDA 2026.pdf": "/ERWAN-PORTFOLIO/static/media/CV Erwan OUBDA 2026.2f3997321739e8779cd7.pdf",
     "index.html": "/ERWAN-PORTFOLIO/index.html",
-    "main.1906905f.css.map": "/ERWAN-PORTFOLIO/static/css/main.1906905f.css.map",
-    "main.8be6da46.js.map": "/ERWAN-PORTFOLIO/static/js/main.8be6da46.js.map",
-    "453.b05d8aa5.chunk.js.map": "/ERWAN-PORTFOLIO/static/js/453.b05d8aa5.chunk.js.map"
+    "main.35083313.css.map": "/ERWAN-PORTFOLIO/static/css/main.35083313.css.map",
+    "main.4444cee3.js.map": "/ERWAN-PORTFOLIO/static/js/main.4444cee3.js.map",
+    "453.e7f01505.chunk.js.map": "/ERWAN-PORTFOLIO/static/js/453.e7f01505.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1906905f.css",
-    "static/js/main.8be6da46.js"
+    "static/css/main.35083313.css",
+    "static/js/main.4444cee3.js"
   ]
 }
