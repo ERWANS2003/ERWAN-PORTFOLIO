@@ -1,1 +1,113 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/ERWAN-PORTFOLIO/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Portfolio de Oubda Wendnongdo Erwan - Développeur Web & Mobile basé à Ouagadougou, Burkina Faso. Spécialisé en React, Laravel, PHP et MySQL."/><link rel="apple-touch-icon" href="/ERWAN-PORTFOLIO/logo192.png"/><link rel="manifest" href="/ERWAN-PORTFOLIO/manifest.json"/><title>Erwan Oubda | Portfolio</title><script defer="defer" src="/ERWAN-PORTFOLIO/static/js/main.4444cee3.js"></script><link href="/ERWAN-PORTFOLIO/static/css/main.35083313.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.ico" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description"
+        content="Portfolio de Oubda Wendnongdo Erwan - Développeur Web & Mobile basé à Ouagadougou, Burkina Faso. Spécialisé en React, Laravel, PHP et MySQL." />
+    <link rel="apple-touch-icon" href="./logo192.png" />
+    <link rel="manifest" href="./manifest.json" />
+    <title>Erwan Oubda | Portfolio</title>
+    <script defer="defer" src="./static/js/main.4444cee3.js"></script>
+    <link href="./static/css/main.35083313.css" rel="stylesheet">
+</head>
+
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script>
+        (function () {
+            function addPortfolioPolish() {
+                const root = document.getElementById('root');
+                if (!root) return;
+
+                const heroText = Array.from(root.querySelectorAll('*')).find((node) => {
+                    return node && node.textContent && node.textContent.includes('Oubda Wendnongdo Erwan');
+                });
+
+                if (heroText) {
+                    const parent = heroText.closest('div') || heroText.parentElement;
+                    if (parent) {
+                        parent.classList.add('portfolio-hero-panel');
+                    }
+                }
+
+                const avatar = root.querySelector('img[alt="Avatar"], img[alt="avatar"], img[src*="avatar_erwan"], [class*="avatar"], .header-image img, .header-image');
+                if (avatar) {
+                    avatar.style.display = 'none';
+                }
+
+                const linkedInProfile = 'https://www.linkedin.com/in/wendnongdo-erwan-oubda-a9b062359';
+                const socialLinks = Array.from(document.querySelectorAll('a[href]')).filter((link) => {
+                    const href = (link.getAttribute('href') || '').toLowerCase();
+                    return href.includes('github.com') || href.includes('linkedin.com');
+                });
+
+                socialLinks.forEach((link) => {
+                    const href = (link.getAttribute('href') || '').toLowerCase();
+                    if (href.includes('linkedin.com')) {
+                        link.setAttribute('href', linkedInProfile);
+                    }
+                    link.classList.add('portfolio-social-link');
+                    link.setAttribute('target', '_blank');
+                    link.setAttribute('rel', 'noreferrer');
+                });
+
+                const certificationSectionId = 'portfolio-linkedin-certifications';
+                if (!document.getElementById(certificationSectionId)) {
+                    const refNode = Array.from(root.querySelectorAll('section, div, h1, h2, h3')).find((node) => {
+                        return node && node.textContent && node.textContent.includes('Compétences');
+                    });
+
+                    const section = document.createElement('section');
+                    section.id = certificationSectionId;
+                    section.className = 'portfolio-certifications';
+                    section.innerHTML = `
+          <div class="portfolio-certifications-header">
+            <span class="kicker">LinkedIn</span>
+            <h2>Certifications & formations</h2>
+          </div>
+          <div class="portfolio-certifications-grid">
+            <article class="portfolio-certification-card">
+              <span class="portfolio-certification-badge">LinkedIn</span>
+              <h3>Développement Web</h3>
+              <p>Compétences front-end, back-end, architecture et bonnes pratiques de production.</p>
+            </article>
+            <article class="portfolio-certification-card">
+              <span class="portfolio-certification-badge">LinkedIn</span>
+              <h3>JavaScript & React</h3>
+              <p>Création d’interfaces dynamiques, composants réutilisables et UX orientée produit.</p>
+            </article>
+            <article class="portfolio-certification-card">
+              <span class="portfolio-certification-badge">LinkedIn</span>
+              <h3>PHP & Laravel</h3>
+              <p>Développement d’applications web complètes, API et gestion de données sécurisées.</p>
+            </article>
+            <article class="portfolio-certification-card">
+              <span class="portfolio-certification-badge">LinkedIn</span>
+              <h3>Base de données</h3>
+              <p>Modélisation SQL, MySQL, gestion de données et optimisation des performances.</p>
+            </article>
+          </div>
+        `;
+
+                    if (refNode && refNode.parentNode) {
+                        refNode.parentNode.insertBefore(section, refNode.nextSibling);
+                    } else {
+                        root.appendChild(section);
+                    }
+                }
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', addPortfolioPolish, { once: true });
+            } else {
+                addPortfolioPolish();
+            }
+        })();
+    </script>
+</body>
+
+</html>
