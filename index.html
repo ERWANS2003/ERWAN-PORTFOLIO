@@ -1,113 +1,880 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="./favicon.ico" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description"
-        content="Portfolio de Oubda Wendnongdo Erwan - Développeur Web & Mobile basé à Ouagadougou, Burkina Faso. Spécialisé en React, Laravel, PHP et MySQL." />
-    <link rel="apple-touch-icon" href="./logo192.png" />
-    <link rel="manifest" href="./manifest.json" />
-    <title>Erwan Oubda | Portfolio</title>
-    <script defer="defer" src="./static/js/main.4444cee3.js"></script>
-    <link href="./static/css/main.35083313.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Erwan Oubda - Ingénieur Informatique spécialisé en Développement Web & Systèmes d'Information. Expert Laravel, React, PHP, Python et Cybersécurité.">
+    <meta name="keywords" content="Développeur Web, Ingénieur Informatique, Laravel, React, PHP, Python, Cybersécurité, Burkina Faso">
+    <meta name="author" content="Oubda Wendnongdo Erwan">
+    <title>Erwan Oubda | Ingénieur Informatique</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" href="./logo192.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="./styles.css">
 </head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="logo">
+                <span class="logo-text">ERWAN</span>
+                <span class="logo-dot">.</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Accueil</a></li>
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#experience" class="nav-link">Expérience</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<body><noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <script>
-        (function () {
-            function addPortfolioPolish() {
-                const root = document.getElementById('root');
-                if (!root) return;
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-tag">
+                        <i class="fas fa-circle pulse"></i>
+                        <span>Disponible pour de nouvelles opportunités</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Bonjour, je suis
+                        <span class="gradient-text">Erwan Oubda</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        Ingénieur Informatique — 
+                        <span class="typed-text"></span>
+                        <span class="cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        Étudiant en master de génie informatique, passionné par le développement web et mobile. 
+                        Je crée des applications performantes avec Laravel, React, et PostgreSQL.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Me Contacter</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="./static/media/CV Erwan OUBDA 2026.2f3997321739e8779cd7.pdf" download class="btn btn-secondary">
+                            <i class="fas fa-download"></i>
+                            <span>Télécharger CV</span>
+                        </a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://github.com/erwanoubda" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/wendnongdo-erwan-oubda-a9b062359" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:erwanoubda_tech@icloud.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span class="code-title">portfolio.php</span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code><span class="code-keyword">&lt;?php</span>
 
-                const heroText = Array.from(root.querySelectorAll('*')).find((node) => {
-                    return node && node.textContent && node.textContent.includes('Oubda Wendnongdo Erwan');
-                });
+<span class="code-keyword">class</span> <span class="code-class">Developer</span> {
+    <span class="code-keyword">public function</span> <span class="code-function">__construct</span>() {
+        <span class="code-variable">$this</span>-><span class="code-property">name</span> = <span class="code-string">"Erwan Oubda"</span>;
+        <span class="code-variable">$this</span>-><span class="code-property">role</span> = <span class="code-string">"Ingénieur Informatique"</span>;
+        <span class="code-variable">$this</span>-><span class="code-property">location</span> = <span class="code-string">"Ouagadougou, BF"</span>;
+    }
+    
+    <span class="code-keyword">public function</span> <span class="code-function">getSkills</span>() {
+        <span class="code-keyword">return</span> [
+            <span class="code-string">"Laravel"</span>, <span class="code-string">"React"</span>, <span class="code-string">"PHP"</span>,
+            <span class="code-string">"Python"</span>, <span class="code-string">"PostgreSQL"</span>
+        ];
+    }
+}
 
-                if (heroText) {
-                    const parent = heroText.closest('div') || heroText.parentElement;
-                    if (parent) {
-                        parent.classList.add('portfolio-hero-panel');
-                    }
-                }
+<span class="code-variable">$erwan</span> = <span class="code-keyword">new</span> <span class="code-class">Developer</span>();
+<span class="code-function">echo</span> <span class="code-string">"Ready to build amazing things!"</span>;
 
-                const avatar = root.querySelector('img[alt="Avatar"], img[alt="avatar"], img[src*="avatar_erwan"], [class*="avatar"], .header-image img, .header-image');
-                if (avatar) {
-                    avatar.style.display = 'none';
-                }
+<span class="code-keyword">?&gt;</span></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll</span>
+        </div>
+    </section>
 
-                const linkedInProfile = 'https://www.linkedin.com/in/wendnongdo-erwan-oubda-a9b062359';
-                const socialLinks = Array.from(document.querySelectorAll('a[href]')).filter((link) => {
-                    const href = (link.getAttribute('href') || '').toLowerCase();
-                    return href.includes('github.com') || href.includes('linkedin.com');
-                });
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">À PROPOS</span>
+                <h2 class="section-title">Qui suis-je ?</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Étudiant en <strong>Master Management des Systèmes d'Information</strong> à l'Université Aube Nouvelle, 
+                        je suis passionné par le développement web et la création de solutions numériques innovantes.
+                    </p>
+                    <p>
+                        Avec une base technique solide acquise à travers mes projets académiques et professionnels, 
+                        je me spécialise dans le développement d'applications web performantes. <strong>Autonome et rigoureux</strong>, 
+                        j'aime relever des défis techniques et transformer des idées en produits fonctionnels.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Formation</h4>
+                                <p>Master en Systèmes d'Information</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <h4>Expérience</h4>
+                                <p>3+ années de projets & stages</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <h4>Certifications</h4>
+                                <p>Google, IBM, DeepLearning.AI</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Localisation</h4>
+                                <p>Ouagadougou, Burkina Faso</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">Projets Réalisés</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">Stages Professionnels</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="12">0</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="8">0</div>
+                        <div class="stat-label">Technologies Maîtrisées</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                socialLinks.forEach((link) => {
-                    const href = (link.getAttribute('href') || '').toLowerCase();
-                    if (href.includes('linkedin.com')) {
-                        link.setAttribute('href', linkedInProfile);
-                    }
-                    link.classList.add('portfolio-social-link');
-                    link.setAttribute('target', '_blank');
-                    link.setAttribute('rel', 'noreferrer');
-                });
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">PARCOURS</span>
+                <h2 class="section-title">Expérience Professionnelle</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker current"></div>
+                    <div class="timeline-content featured-experience">
+                        <div class="timeline-date current-position">
+                            <i class="fas fa-briefcase"></i> En cours - Depuis 2026
+                        </div>
+                        <h3>Stagiaire IT</h3>
+                        <h4>
+                            <a href="https://www.nere-mining.bf/" target="_blank" rel="noopener noreferrer" class="company-link">
+                                Nere Mining <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </h4>
+                        <p>Support technique et développement de solutions informatiques pour l'entreprise minière</p>
+                        <ul class="timeline-tasks">
+                            <li><i class="fas fa-check"></i>Support technique aux utilisateurs et maintenance systèmes</li>
+                            <li><i class="fas fa-check"></i>Développement d'applications web internes</li>
+                            <li><i class="fas fa-check"></i>Gestion de l'infrastructure IT et des bases de données</li>
+                            <li><i class="fas fa-check"></i>Automatisation de processus et optimisation</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Support IT</span>
+                            <span class="tag">Développement Web</span>
+                            <span class="tag">Infrastructure</span>
+                            <span class="tag">Bases de données</span>
+                        </div>
+                    </div>
+                </div>
 
-                const certificationSectionId = 'portfolio-linkedin-certifications';
-                if (!document.getElementById(certificationSectionId)) {
-                    const refNode = Array.from(root.querySelectorAll('section, div, h1, h2, h3')).find((node) => {
-                        return node && node.textContent && node.textContent.includes('Compétences');
-                    });
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Juillet - Septembre 2025</div>
+                        <h3>Stagiaire Développeur Web</h3>
+                        <h4>Ministère de la Communication, de la Culture, des Arts et du Tourisme</h4>
+                        <p>Conception et mise en place d'une plateforme de répertoire des patronymes du Burkina Faso</p>
+                        <ul class="timeline-tasks">
+                            <li><i class="fas fa-check"></i>Analyse des besoins et modélisation UML</li>
+                            <li><i class="fas fa-check"></i>Création du cahier des charges complet</li>
+                            <li><i class="fas fa-check"></i>Développement backend et gestion de base de données</li>
+                            <li><i class="fas fa-check"></i>Optimisation des performances et documentation technique</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">UML</span>
+                        </div>
+                    </div>
+                </div>
 
-                    const section = document.createElement('section');
-                    section.id = certificationSectionId;
-                    section.className = 'portfolio-certifications';
-                    section.innerHTML = `
-          <div class="portfolio-certifications-header">
-            <span class="kicker">LinkedIn</span>
-            <h2>Certifications & formations</h2>
-          </div>
-          <div class="portfolio-certifications-grid">
-            <article class="portfolio-certification-card">
-              <span class="portfolio-certification-badge">LinkedIn</span>
-              <h3>Développement Web</h3>
-              <p>Compétences front-end, back-end, architecture et bonnes pratiques de production.</p>
-            </article>
-            <article class="portfolio-certification-card">
-              <span class="portfolio-certification-badge">LinkedIn</span>
-              <h3>JavaScript & React</h3>
-              <p>Création d’interfaces dynamiques, composants réutilisables et UX orientée produit.</p>
-            </article>
-            <article class="portfolio-certification-card">
-              <span class="portfolio-certification-badge">LinkedIn</span>
-              <h3>PHP & Laravel</h3>
-              <p>Développement d’applications web complètes, API et gestion de données sécurisées.</p>
-            </article>
-            <article class="portfolio-certification-card">
-              <span class="portfolio-certification-badge">LinkedIn</span>
-              <h3>Base de données</h3>
-              <p>Modélisation SQL, MySQL, gestion de données et optimisation des performances.</p>
-            </article>
-          </div>
-        `;
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Juin 2024</div>
+                        <h3>Développeur - Système de Gestion Hôtelière</h3>
+                        <h4>Projet Académique - Université Aube Nouvelle</h4>
+                        <p>Développement d'une application web complète de gestion hôtelière</p>
+                        <ul class="timeline-tasks">
+                            <li><i class="fas fa-check"></i>Système d'authentification sécurisé</li>
+                            <li><i class="fas fa-check"></i>Gestion des chambres et réservations</li>
+                            <li><i class="fas fa-check"></i>Module de reporting et statistiques</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
 
-                    if (refNode && refNode.parentNode) {
-                        refNode.parentNode.insertBefore(section, refNode.nextSibling);
-                    } else {
-                        root.appendChild(section);
-                    }
-                }
-            }
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Juillet - Septembre 2023</div>
+                        <h3>Stagiaire - Documentation Logicielle</h3>
+                        <h4>MAS Distribution</h4>
+                        <p>Rédaction et organisation de la documentation technique de l'entreprise</p>
+                        <ul class="timeline-tasks">
+                            <li><i class="fas fa-check"></i>Rédaction de documentations techniques</li>
+                            <li><i class="fas fa-check"></i>Appui à la digitalisation des processus internes</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Documentation</span>
+                            <span class="tag">Digitalisation</span>
+                        </div>
+                    </div>
+                </div>
 
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', addPortfolioPolish, { once: true });
-            } else {
-                addPortfolioPolish();
-            }
-        })();
-    </script>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Juillet - Septembre 2023</div>
+                        <h3>Développeur - Système de Gestion des PDI</h3>
+                        <h4>Projet Académique - Université Aube Nouvelle</h4>
+                        <p>Système de gestion des personnes déplacées internes</p>
+                        <ul class="timeline-tasks">
+                            <li><i class="fas fa-check"></i>Analyse et conception du système</li>
+                            <li><i class="fas fa-check"></i>Développement complet de l'application</li>
+                            <li><i class="fas fa-check"></i>Présentation finale et rapport technique</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">MERISE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">RÉALISATIONS</span>
+                <h2 class="section-title">Projets Principaux</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop" alt="Nere Mining">
+                        <div class="project-overlay">
+                            <a href="https://www.nere-mining.bf/" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tag featured-tag">Projet Professionnel</div>
+                        <h3>Nere Mining - Site Web Corporatif</h3>
+                        <p>
+                            Site web corporatif pour Nere Mining, entreprise minière au Burkina Faso. 
+                            Solution moderne et professionnelle présentant les activités, valeurs et réalisations de l'entreprise.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Responsive</span>
+                            <span>SEO</span>
+                            <span>CMS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop" alt="Plateforme Patronymes">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Plateforme Répertoire des Patronymes</h3>
+                        <p>
+                            Plateforme complète de répertoire des patronymes du Burkina Faso développée pour le 
+                            Ministère de la Communication. Solution incluant l'analyse UML et l'architecture Laravel optimisée.
+                        </p>
+                        <div class="project-tech">
+                            <span>Laravel</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>UML</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop" alt="Gestion Hôtelière">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Système de Gestion Hôtelière</h3>
+                        <p>
+                            Application web complète pour la gestion d'hôtel incluant authentification, 
+                            gestion des chambres, système de réservations et module de reporting.
+                        </p>
+                        <div class="project-tech">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&h=600&fit=crop" alt="Gestion PDI">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Système de Gestion des PDI</h3>
+                        <p>
+                            Système de gestion des personnes déplacées internes avec modules d'enregistrement, 
+                            suivi et génération de rapports statistiques.
+                        </p>
+                        <div class="project-tech">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>MERISE</span>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FORMATION CONTINUE</span>
+                <h2 class="section-title">Certifications Professionnelles</h2>
+            </div>
+            <div class="certifications-grid">
+                <div class="cert-card google">
+                    <div class="cert-header">
+                        <div class="cert-logo">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="cert-badge">9 Cours</div>
+                    </div>
+                    <h3>Google Cybersecurity Professional Certificate</h3>
+                    <p class="cert-issuer">Émis par Google via Coursera</p>
+                    <p class="cert-description">
+                        Formation complète en cybersécurité couvrant Python, Linux, SQL, outils SIEM, 
+                        systèmes de détection d'intrusion (IDS), et techniques d'identification et 
+                        de mitigation des risques et vulnérabilités.
+                    </p>
+                    <div class="cert-skills">
+                        <span><i class="fas fa-shield-alt"></i> Python</span>
+                        <span><i class="fas fa-shield-alt"></i> Linux</span>
+                        <span><i class="fas fa-shield-alt"></i> SQL</span>
+                        <span><i class="fas fa-shield-alt"></i> SIEM</span>
+                        <span><i class="fas fa-shield-alt"></i> IDS</span>
+                    </div>
+                    <div class="cert-footer">
+                        <span class="cert-date"><i class="far fa-calendar"></i> Juillet 2026</span>
+                        <a href="https://coursera.org/verify/professional-cert/2Q1LSTHAHANE" target="_blank" rel="noopener noreferrer" class="cert-verify">
+                            Vérifier <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cert-card ibm">
+                    <div class="cert-header">
+                        <div class="cert-logo">
+                            <i class="fab fa-product-hunt"></i>
+                        </div>
+                        <div class="cert-badge">Coursera</div>
+                    </div>
+                    <h3>Introduction to Data Engineering</h3>
+                    <p class="cert-issuer">Émis par IBM via Coursera</p>
+                    <p class="cert-description">
+                        Formation sur les fondamentaux de l'ingénierie des données, incluant 
+                        les pipelines de données, l'architecture ETL, et les meilleures pratiques 
+                        pour la gestion et le traitement de données à grande échelle.
+                    </p>
+                    <div class="cert-skills">
+                        <span><i class="fas fa-database"></i> Data Pipelines</span>
+                        <span><i class="fas fa-database"></i> ETL</span>
+                        <span><i class="fas fa-database"></i> Big Data</span>
+                    </div>
+                    <div class="cert-footer">
+                        <span class="cert-date"><i class="far fa-calendar"></i> Mai 2026</span>
+                        <a href="https://coursera.org/verify/T7UJD5USE37N" target="_blank" rel="noopener noreferrer" class="cert-verify">
+                            Vérifier <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cert-card deeplearning">
+                    <div class="cert-header">
+                        <div class="cert-logo">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="cert-badge">Coursera</div>
+                    </div>
+                    <h3>L'IA pour tous</h3>
+                    <p class="cert-issuer">Émis par DeepLearning.AI via Coursera</p>
+                    <p class="cert-description">
+                        Introduction complète à l'intelligence artificielle et au machine learning. 
+                        Comprendre les concepts fondamentaux de l'IA, son impact sur la société, 
+                        et comment l'intégrer dans des projets réels.
+                    </p>
+                    <div class="cert-skills">
+                        <span><i class="fas fa-robot"></i> Intelligence Artificielle</span>
+                        <span><i class="fas fa-robot"></i> Machine Learning</span>
+                        <span><i class="fas fa-robot"></i> Deep Learning</span>
+                    </div>
+                    <div class="cert-footer">
+                        <span class="cert-date"><i class="far fa-calendar"></i> Mai 2026</span>
+                        <a href="https://coursera.org/verify/51651VAWDYVA" target="_blank" rel="noopener noreferrer" class="cert-verify">
+                            Vérifier <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">EXPERTISE</span>
+                <h2 class="section-title">Compétences Techniques</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Développement Backend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Laravel</span>
+                                <span class="skill-level">Avancé</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PHP</span>
+                                <span class="skill-level">Avancé</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">Intermédiaire</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-level">Intermédiaire</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">C/C++</span>
+                                <span class="skill-level">Intermédiaire</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="68"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Développement Frontend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <span class="skill-level">Avancé</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">Avancé</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Bases de Données</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MySQL</span>
+                                <span class="skill-level">Avancé</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="87"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PostgreSQL</span>
+                                <span class="skill-level">Avancé</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-level">Avancé</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Outils & Méthodologies</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git / GitHub</span>
+                                <span class="skill-level">Avancé</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="83"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">UML / MERISE</span>
+                                <span class="skill-level">Avancé</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Linux</span>
+                                <span class="skill-level">Intermédiaire</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="72"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Méthodologie 2TUP</span>
+                                <span class="skill-level">Avancé</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="78"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="languages">
+                <h3 class="languages-title"><i class="fas fa-language"></i> Langues</h3>
+                <div class="languages-grid">
+                    <div class="language-item">
+                        <span class="language-name">Français</span>
+                        <span class="language-level">Courant</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">Anglais</span>
+                        <span class="language-level">Intermédiaire</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">Mooré</span>
+                        <span class="language-level">Courant</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">CONTACTEZ-MOI</span>
+                <h2 class="section-title">Travaillons Ensemble</h2>
+                <p class="section-description">
+                    Je suis actuellement disponible pour des opportunités de stage, de freelance ou de CDI. 
+                    N'hésitez pas à me contacter !
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Email</h4>
+                        <a href="mailto:erwanoubda_tech@icloud.com">erwanoubda_tech@icloud.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Téléphone</h4>
+                        <a href="tel:+22666488928">+226 66 48 89 28</a>
+                        <a href="tel:+22651630546">+226 51 63 05 46</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Localisation</h4>
+                        <p>Ouagadougou<br>Burkina Faso</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h4>Réseaux Sociaux</h4>
+                        <div class="contact-social">
+                            <a href="https://github.com/erwanoubda" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/wendnongdo-erwan-oubda-a9b062359" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">
+                                <i class="fas fa-user"></i> Nom complet
+                            </label>
+                            <input type="text" id="name" name="name" required placeholder="Votre nom">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i> Email
+                            </label>
+                            <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">
+                                <i class="fas fa-tag"></i> Sujet
+                            </label>
+                            <input type="text" id="subject" name="subject" required placeholder="Sujet du message">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">
+                                <i class="fas fa-comment"></i> Message
+                            </label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Votre message..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Envoyer le Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>ERWAN<span>.</span></h3>
+                    <p>Ingénieur Informatique</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#experience">Expérience</a></li>
+                        <li><a href="#projects">Projets</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#skills">Compétences</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> erwanoubda_tech@icloud.com</li>
+                        <li><i class="fas fa-phone"></i> +226 66 48 89 28</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Ouagadougou, BF</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Suivez-moi</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/erwanoubda" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/wendnongdo-erwan-oubda-a9b062359" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:erwanoubda_tech@icloud.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Erwan Oubda. Tous droits réservés.</p>
+                <p>Conçu & Développé avec <i class="fas fa-heart"></i> par Erwan</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="./script.js"></script>
 </body>
-
 </html>
