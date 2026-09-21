@@ -169,7 +169,8 @@ const observerOptions = {
     rootMargin: '0px 0px -50px 0px'
 };
 
-// Enhanced Intersection Observer
+// Enhanced Intersection Observer - DISABLED FOR IMMEDIATE DISPLAY
+/*
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -212,24 +213,25 @@ skillItems.forEach(item => observer.observe(item));
 // Observe stat cards
 const statCards = selectAll('.stat-card');
 statCards.forEach(card => observer.observe(card));
+*/
+
+// Make all elements visible immediately
+const animateElements = selectAll('.timeline-item, .project-card, .cert-card, .skill-category, .contact-card, .about-text, .about-stats');
+animateElements.forEach(el => {
+    el.classList.add('in-view');
+    el.style.opacity = '1';
+});
 
 // ===================================
-// ENHANCED SCROLL REVEAL
+// ENHANCED SCROLL REVEAL - DISABLED
 // ===================================
 
 const revealElements = selectAll('.reveal');
-const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-            revealObserver.unobserve(entry.target);
-        }
-    });
-}, {
-    threshold: 0.15
+// Make reveal elements visible immediately
+revealElements.forEach(el => {
+    el.classList.add('active');
+    el.style.opacity = '1';
 });
-
-revealElements.forEach(el => revealObserver.observe(el));
 
 // ===================================
 // PARALLAX SCROLLING EFFECT
@@ -729,26 +731,12 @@ projectCards.forEach(card => {
 
 const timelineItems = selectAll('.timeline-item');
 
-const timelineObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '0';
-            entry.target.style.transform = 'translateX(-20px)';
-            
-            setTimeout(() => {
-                entry.target.style.transition = 'all 0.6s ease';
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateX(0)';
-            }, 100);
-            
-            timelineObserver.unobserve(entry.target);
-        }
-    });
-}, {
-    threshold: 0.2
+// Make timeline items visible immediately
+timelineItems.forEach(item => {
+    item.style.opacity = '1';
+    item.style.transform = 'translateX(0)';
+    item.classList.add('in-view');
 });
-
-timelineItems.forEach(item => timelineObserver.observe(item));
 
 // ===================================
 // CERTIFICATE CARD EFFECTS
@@ -780,27 +768,14 @@ certCards.forEach(card => {
 const skillsSection = select('#skills');
 
 if (skillsSection) {
-    let skillsAnimated = false;
-    
-    const skillsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !skillsAnimated) {
-                const skillBars = selectAll('.skill-progress');
-                skillBars.forEach((bar, index) => {
-                    const targetWidth = bar.getAttribute('data-progress');
-                    setTimeout(() => {
-                        bar.style.width = `${targetWidth}%`;
-                    }, index * 100);
-                });
-                skillsAnimated = true;
-                skillsObserver.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.3
+    // Animate skill bars immediately
+    const skillBars = selectAll('.skill-progress');
+    skillBars.forEach((bar, index) => {
+        const targetWidth = bar.getAttribute('data-progress');
+        setTimeout(() => {
+            bar.style.width = `${targetWidth}%`;
+        }, index * 100);
     });
-    
-    skillsObserver.observe(skillsSection);
 }
 
 // ===================================

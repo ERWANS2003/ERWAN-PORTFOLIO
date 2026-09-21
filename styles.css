@@ -1824,8 +1824,8 @@ img {
 
 /* Smooth Scroll Reveal */
 .reveal {
-    opacity: 0;
-    transform: translateY(50px);
+    opacity: 1;
+    transform: translateY(0);
     transition: all 0.6s ease-out;
 }
 
@@ -1889,8 +1889,8 @@ img {
 
 /* Enhanced Timeline Animation */
 .timeline-item {
-    opacity: 0;
-    transform: translateX(-50px);
+    opacity: 1;
+    transform: translateX(0);
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1900,16 +1900,16 @@ img {
 }
 
 /* Staggered Animation */
-.timeline-item:nth-child(1) { transition-delay: 0.1s; }
-.timeline-item:nth-child(2) { transition-delay: 0.2s; }
-.timeline-item:nth-child(3) { transition-delay: 0.3s; }
-.timeline-item:nth-child(4) { transition-delay: 0.4s; }
-.timeline-item:nth-child(5) { transition-delay: 0.5s; }
+.timeline-item:nth-child(1) { transition-delay: 0s; }
+.timeline-item:nth-child(2) { transition-delay: 0s; }
+.timeline-item:nth-child(3) { transition-delay: 0s; }
+.timeline-item:nth-child(4) { transition-delay: 0s; }
+.timeline-item:nth-child(5) { transition-delay: 0s; }
 
 /* Project Cards Grid Animation */
 .project-card {
-    opacity: 0;
-    transform: translateY(30px) scale(0.95);
+    opacity: 1;
+    transform: translateY(0) scale(1);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1918,15 +1918,15 @@ img {
     transform: translateY(0) scale(1);
 }
 
-.project-card:nth-child(1) { transition-delay: 0.1s; }
-.project-card:nth-child(2) { transition-delay: 0.2s; }
-.project-card:nth-child(3) { transition-delay: 0.3s; }
-.project-card:nth-child(4) { transition-delay: 0.4s; }
+.project-card:nth-child(1) { transition-delay: 0s; }
+.project-card:nth-child(2) { transition-delay: 0s; }
+.project-card:nth-child(3) { transition-delay: 0s; }
+.project-card:nth-child(4) { transition-delay: 0s; }
 
 /* Certification Cards Animation */
 .cert-card {
-    opacity: 0;
-    transform: scale(0.9) rotateY(-10deg);
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1935,9 +1935,9 @@ img {
     transform: scale(1) rotateY(0deg);
 }
 
-.cert-card:nth-child(1) { transition-delay: 0.1s; }
-.cert-card:nth-child(2) { transition-delay: 0.2s; }
-.cert-card:nth-child(3) { transition-delay: 0.3s; }
+.cert-card:nth-child(1) { transition-delay: 0s; }
+.cert-card:nth-child(2) { transition-delay: 0s; }
+.cert-card:nth-child(3) { transition-delay: 0s; }
 
 /* Skill Progress Animation */
 .skill-progress {
