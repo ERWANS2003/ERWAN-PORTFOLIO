@@ -1,5 +1,5 @@
 /* ===================================
-   MODERN PROFESSIONAL PORTFOLIO JS
+   MODERN UNIQUE PORTFOLIO 2026
    Author: Erwan Oubda
    =================================== */
 
@@ -23,47 +23,6 @@ const debounce = (func, wait = 20) => {
         timeout = setTimeout(later, wait);
     };
 };
-
-// ===================================
-// THEME TOGGLE (DARK MODE)
-// ===================================
-
-const themeToggle = select('#themeToggle');
-const htmlElement = document.documentElement;
-
-// Check for saved theme preference or default to light mode
-const currentTheme = localStorage.getItem('theme') || 'light';
-htmlElement.setAttribute('data-theme', currentTheme);
-
-// Update icon based on current theme
-const updateThemeIcon = () => {
-    const icon = themeToggle.querySelector('i');
-    if (htmlElement.getAttribute('data-theme') === 'dark') {
-        icon.className = 'fas fa-sun';
-    } else {
-        icon.className = 'fas fa-moon';
-    }
-};
-
-updateThemeIcon();
-
-// Toggle theme on button click
-if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = htmlElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        
-        htmlElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon();
-        
-        // Animate the transition
-        themeToggle.style.transform = 'rotate(360deg)';
-        setTimeout(() => {
-            themeToggle.style.transform = 'rotate(0deg)';
-        }, 300);
-    });
-}
 
 // ===================================
 // NAVIGATION
