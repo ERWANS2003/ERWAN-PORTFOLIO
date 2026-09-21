@@ -6,92 +6,92 @@
    CSS VARIABLES
    =================================== */
 :root {
-    /* Primary Colors - Plus subtil et professionnel */
-    --primary-color: #64ffda;
-    --primary-dark: #52e5c4;
-    --primary-light: #8afce7;
+    /* Primary Colors */
+    --primary-color: #3b82f6;
+    --primary-dark: #2563eb;
+    --primary-light: #60a5fa;
     
     /* Accent Colors */
-    --accent-color: #7c3aed;
-    --accent-dark: #6d28d9;
+    --accent-color: #8b5cf6;
+    --accent-dark: #7c3aed;
     
-    /* Neutral Colors - Palette plus sophistiquée */
-    --dark: #0a192f;
-    --dark-secondary: #112240;
-    --dark-tertiary: #233554;
-    --light: #ffffff;
-    --light-secondary: #f8fafc;
+    /* Neutral Colors */
+    --dark: #0f172a;
+    --dark-secondary: #1e293b;
+    --dark-tertiary: #334155;
+    --light: #f8fafc;
+    --light-secondary: #f1f5f9;
     --light-tertiary: #e2e8f0;
     
     /* Text Colors */
-    --text-primary: #0a192f;
-    --text-secondary: #8892b0;
-    --text-light: #a8b2d1;
-    --text-white: #ccd6f6;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-light: #64748b;
+    --text-white: #ffffff;
     
     /* Status Colors */
     --success: #10b981;
     --warning: #f59e0b;
     --error: #ef4444;
-    --info: #64ffda;
+    --info: #3b82f6;
     
-    /* Gradients - Plus subtils */
-    --gradient-primary: linear-gradient(135deg, #64ffda 0%, #7c3aed 100%);
-    --gradient-secondary: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
-    --gradient-dark: linear-gradient(135deg, #0a192f 0%, #112240 100%);
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    --gradient-secondary: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+    --gradient-dark: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     
-    /* Shadows - Plus doux */
-    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    --shadow-glow: 0 0 30px rgba(100, 255, 218, 0.2);
+    --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.3);
     
     /* Transitions */
-    --transition-fast: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-    --transition-base: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-    --transition-slow: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
     
-    /* Border Radius - Plus arrondis */
-    --radius-sm: 0.25rem;
+    /* Border Radius */
+    --radius-sm: 0.375rem;
     --radius-md: 0.5rem;
-    --radius-lg: 1rem;
-    --radius-xl: 1.5rem;
-    --radius-2xl: 2rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
     
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 3rem;
-    --spacing-xl: 4rem;
-    --spacing-2xl: 6rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
     
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+    --font-mono: 'JetBrains Mono', 'Courier New', monospace;
 }
 
-/* Dark Mode Variables - Style Brittany Chiang */
+/* Dark Mode Variables */
 [data-theme="dark"] {
     /* Neutral Colors */
-    --dark: #ccd6f6;
-    --light: #0a192f;
-    --light-secondary: #112240;
-    --light-tertiary: #233554;
+    --dark: #f8fafc;
+    --light: #0f172a;
+    --light-secondary: #1e293b;
+    --light-tertiary: #334155;
     
     /* Text Colors */
-    --text-primary: #ccd6f6;
-    --text-secondary: #8892b0;
-    --text-light: #a8b2d1;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-light: #94a3b8;
     
-    /* Shadows (plus prononcés) */
-    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.6);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.7);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.8);
-    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
+    /* Shadows (darker for dark mode) */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
 }
 
 /* ===================================
@@ -134,17 +134,12 @@ h4 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 p {
     margin-bottom: 1rem;
     color: var(--text-secondary);
-    line-height: 1.7;
 }
 
 a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: inherit;
     transition: var(--transition-base);
-}
-
-a:hover {
-    color: var(--primary-dark);
 }
 
 img {
@@ -169,13 +164,6 @@ img {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     display: inline-block;
-}
-
-[data-theme="dark"] .gradient-text {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 .pulse {
@@ -212,11 +200,7 @@ img {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
     margin-bottom: var(--spacing-md);
-    color: var(--text-primary);
-}
-
-[data-theme="dark"] .section-title {
-    color: var(--text-primary);
+    color: var(--dark);
 }
 
 .section-description {
@@ -224,7 +208,6 @@ img {
     color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto;
-    line-height: 1.7;
 }
 
 /* ===================================
