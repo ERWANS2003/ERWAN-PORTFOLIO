@@ -1547,4 +1547,300 @@ img[src*="avatar_erwan"],
     color: #374151
 }
 
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    background:
+        radial-gradient(circle at top left, rgba(79, 70, 229, .2), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(236, 72, 153, .18), transparent 30%),
+        #0b1020;
+    color: #e5e7eb
+}
+
+* {
+    box-sizing: border-box
+}
+
+::selection {
+    background: rgba(139, 92, 246, .35);
+    color: #fff
+}
+
+.main-container {
+    overflow: hidden
+}
+
+.navigation-bar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, .06);
+    box-shadow: 0 8px 30px rgba(15, 23, 42, .12)
+}
+
+.navigation-bar a,
+.navigation-bar button,
+.navigation-bar span {
+    letter-spacing: .01em
+}
+
+.navigation-bar button {
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .08)
+}
+
+.main-hero-container {
+    position: relative;
+    isolation: isolate;
+    background:
+        radial-gradient(circle at 18% 20%, rgba(99, 102, 241, .26), transparent 30%),
+        radial-gradient(circle at 78% 18%, rgba(236, 72, 153, .23), transparent 24%),
+        linear-gradient(180deg, #0b1020 0%, #0f172a 100%)
+}
+
+.main-hero-container:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+    mask-image: radial-gradient(circle at center, black 35%, transparent 90%);
+    pointer-events: none
+}
+
+.glass-card {
+    background: rgba(15, 23, 42, .72);
+    border: 1px solid rgba(148, 163, 184, .17);
+    box-shadow: 0 30px 80px rgba(2, 6, 23, .45), inset 0 1px 0 rgba(255,255,255,.08);
+    position: relative
+}
+
+.image-wrapper .avatar-glow {
+    background: linear-gradient(135deg, rgba(99,102,241,.95), rgba(236,72,153,.9), rgba(56,189,248,.7));
+    filter: blur(28px);
+    opacity: .7
+}
+
+.content {
+    gap: 1.2rem
+}
+
+.content .hero-title {
+    background: linear-gradient(135deg, #fff 0%, #dfe7ff 35%, #b4c3ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent
+}
+
+.content .hero-subtitle {
+    font-size: 1.75rem;
+    letter-spacing: -.02em
+}
+
+.content .hero-description {
+    color: rgba(226, 232, 240, .82)
+}
+
+.content .tech-stack span {
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(148,163,184,.16);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.04)
+}
+
+.content .action-buttons .social_icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(148,163,184,.12)
+}
+
+.content .action-buttons .social_icons .social-icon:hover {
+    background: rgba(99, 102, 241, .12);
+    border-color: rgba(129, 140, 248, .35)
+}
+
+.content .action-buttons .btn-primary {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.16)
+}
+
+.content .action-buttons .btn-primary:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.15) 50%, transparent 100%);
+    transform: translateX(-120%);
+    transition: transform .7s ease
+}
+
+.content .action-buttons .btn-primary:hover:before {
+    transform: translateX(120%)
+}
+
+.skills-container .skills-grid .skill {
+    background: rgba(15, 23, 42, .5);
+    border: 1px solid rgba(148, 163, 184, .12);
+    border-radius: 22px;
+    padding: 1.2rem 1rem;
+    box-shadow: 0 12px 28px rgba(2, 6, 23, .16)
+}
+
+.skills-container .skills-grid .skill:hover {
+    transform: translateY(-3px);
+    border-color: rgba(129, 140, 248, .25);
+    box-shadow: 0 20px 30px rgba(79, 70, 229, .1)
+}
+
+.vertical-timeline-element-content {
+    background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(248,250,252,.94));
+    border: 1px solid rgba(148,163,184,.16);
+    border-radius: 20px;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, .12);
+    overflow: hidden
+}
+
+.vertical-timeline-element-content h2,
+.vertical-timeline-element-content h3,
+.vertical-timeline-element-content h4,
+.vertical-timeline-element-content p,
+.vertical-timeline-element-content span,
+.vertical-timeline-element-content li {
+    color: #0f172a
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-date {
+    color: #475569 !important
+}
+
+.projects-container .projects-grid .project {
+    background: rgba(15, 23, 42, .46);
+    border: 1px solid rgba(148,163,184,.12);
+    border-radius: 24px;
+    padding: 1rem;
+    box-shadow: 0 20px 35px rgba(2, 6, 23, .13)
+}
+
+.project-image-wrapper {
+    border-radius: 16px;
+    border: 1px solid rgba(148,163,184,.12);
+    box-shadow: 0 14px 28px rgba(2, 6, 23, .18)
+}
+
+.project h2 {
+    color: #f8fafc;
+    margin-top: .9rem
+}
+
+.contact-info {
+    background: linear-gradient(135deg, rgba(79, 70, 229, .12), rgba(168, 85, 247, .08));
+    border: 1px solid rgba(129, 140, 248, .2);
+    box-shadow: 0 18px 30px rgba(79, 70, 229, .08)
+}
+
+.contact-form fieldset {
+    border: 1px solid rgba(148,163,184,.18) !important;
+    border-radius: 12px;
+    background: rgba(15, 23, 42, .42)
+}
+
+.contact-form .MuiInputBase-root,
+.contact-form .MuiTextField-root {
+    border-radius: 12px;
+    overflow: hidden
+}
+
+.contact-form button {
+    border-radius: 999px;
+    box-shadow: 0 14px 25px rgba(79, 70, 229, .18);
+    transition: transform .2s ease, box-shadow .2s ease
+}
+
+.contact-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 34px rgba(139, 92, 246, .24)
+}
+
+.light-mode body {
+    background:
+        radial-gradient(circle at top left, rgba(99, 102, 241, .12), transparent 26%),
+        radial-gradient(circle at bottom right, rgba(236, 72, 153, .09), transparent 25%),
+        #f5f7fb
+}
+
+.light-mode .main-hero-container {
+    background:
+        radial-gradient(circle at 18% 20%, rgba(99, 102, 241, .14), transparent 30%),
+        radial-gradient(circle at 78% 18%, rgba(236, 72, 153, .12), transparent 24%),
+        linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%)
+}
+
+.light-mode .glass-card,
+.light-mode .skills-container .skills-grid .skill,
+.light-mode .projects-container .projects-grid .project {
+    background: rgba(255,255,255,.72);
+    border-color: rgba(15, 23, 42, .08);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, .08)
+}
+
+.light-mode .content .hero-description,
+.light-mode .content .tech-stack span,
+.light-mode .content .hero-subtitle,
+.light-mode .project h2,
+.light-mode .vertical-timeline-element-content h2,
+.light-mode .vertical-timeline-element-content h3,
+.light-mode .vertical-timeline-element-content h4,
+.light-mode .vertical-timeline-element-content p,
+.light-mode .vertical-timeline-element-content span,
+.light-mode .vertical-timeline-element-content li {
+    color: #111827
+}
+
+.light-mode .content .tech-stack span {
+    background: rgba(99, 102, 241, .05);
+    border-color: rgba(99, 102, 241, .12)
+}
+
+.light-mode .navigation-bar button {
+    background: rgba(17, 24, 39, .04);
+    border-color: rgba(17, 24, 39, .08)
+}
+
+.light-mode .contact-form fieldset {
+    background: rgba(255,255,255,.7);
+    border-color: rgba(148,163,184,.2) !important
+}
+
+@media (max-width: 900px) {
+    .main-hero-container {
+        padding: 1.25rem .75rem 2rem
+    }
+
+    .glass-card {
+        padding: 1.5rem 1.1rem;
+        border-radius: 22px
+    }
+
+    .content .hero-title {
+        font-size: clamp(2.2rem, 8vw, 3.2rem)
+    }
+
+    .content .hero-subtitle {
+        font-size: clamp(1.2rem, 4vw, 1.7rem)
+    }
+
+    .projects-container .projects-grid {
+        grid-template-columns: 1fr
+    }
+}
+
 /*# sourceMappingURL=main.35083313.css.map*/
