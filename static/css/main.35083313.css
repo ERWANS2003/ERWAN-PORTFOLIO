@@ -126,7 +126,7 @@ p {
 }
 
 .light-mode .about-section {
-    background-image: url(/ERWAN-PORTFOLIO/static/media/bg-light.bac0efb485244a522981.png)
+    background-image: url(./static/media/bg-light.bac0efb485244a522981.png)
 }
 
 .light-mode .skills-container svg {
