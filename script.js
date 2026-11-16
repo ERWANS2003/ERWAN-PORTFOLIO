@@ -57,13 +57,13 @@ navLinks.forEach(link => {
 let lastScroll = 0;
 const handleScroll = debounce(() => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 100) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-    
+
     lastScroll = currentScroll;
 }, 10);
 
@@ -74,13 +74,13 @@ const sections = selectAll('section[id]');
 
 const highlightNavigation = () => {
     const scrollY = window.pageYOffset;
-    
+
     sections.forEach(section => {
         const sectionHeight = section.offsetHeight;
         const sectionTop = section.offsetTop - 100;
         const sectionId = section.getAttribute('id');
         const navLink = select(`.nav-link[href="#${sectionId}"]`);
-        
+
         if (navLink) {
             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                 navLinks.forEach(link => link.classList.remove('active'));
@@ -98,7 +98,7 @@ navLinks.forEach(link => {
         e.preventDefault();
         const targetId = link.getAttribute('href');
         const targetSection = select(targetId);
-        
+
         if (targetSection) {
             const offsetTop = targetSection.offsetTop - 80;
             window.scrollTo({
@@ -124,15 +124,15 @@ if (typedTextElement) {
         'Expert Laravel & React',
         'Ingénieur Logiciel'
     ];
-    
+
     let textArrayIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
     let typingDelay = 100;
-    
+
     const type = () => {
         const currentText = textArray[textArrayIndex];
-        
+
         if (isDeleting) {
             typedTextElement.textContent = currentText.substring(0, charIndex - 1);
             charIndex--;
@@ -142,7 +142,7 @@ if (typedTextElement) {
             charIndex++;
             typingDelay = 100;
         }
-        
+
         if (!isDeleting && charIndex === currentText.length) {
             typingDelay = 2000; // Wait before deleting
             isDeleting = true;
@@ -151,10 +151,10 @@ if (typedTextElement) {
             textArrayIndex = (textArrayIndex + 1) % textArray.length;
             typingDelay = 500; // Wait before typing next
         }
-        
+
         setTimeout(type, typingDelay);
     };
-    
+
     // Start typing effect
     setTimeout(type, 1000);
 }
@@ -242,13 +242,13 @@ let ticking = false;
 
 const updateParallax = () => {
     const scrolled = window.pageYOffset;
-    
+
     parallaxElements.forEach((element, index) => {
         const speed = (index + 1) * 0.1;
         const yPos = -(scrolled * speed);
         element.style.transform = `translateY(${yPos}px)`;
     });
-    
+
     ticking = false;
 };
 
@@ -270,16 +270,16 @@ cardParallaxElements.forEach(card => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        
+
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-        
+
         const rotateX = (y - centerY) / 20;
         const rotateY = (centerX - x) / 20;
-        
+
         card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
     });
-    
+
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
     });
@@ -294,14 +294,14 @@ const smoothScrollTo = (target, duration = 1000) => {
     const startPosition = window.pageYOffset;
     const distance = targetPosition - startPosition;
     let startTime = null;
-    
+
     const easeInOutQuad = (t, b, c, d) => {
         t /= d / 2;
         if (t < 1) return c / 2 * t * t + b;
         t--;
         return -c / 2 * (t * (t - 2) - 1) + b;
     };
-    
+
     const animation = (currentTime) => {
         if (startTime === null) startTime = currentTime;
         const timeElapsed = currentTime - startTime;
@@ -309,7 +309,7 @@ const smoothScrollTo = (target, duration = 1000) => {
         window.scrollTo(0, run);
         if (timeElapsed < duration) requestAnimationFrame(animation);
     };
-    
+
     requestAnimationFrame(animation);
 };
 
@@ -319,7 +319,7 @@ navLinks.forEach(link => {
         e.preventDefault();
         const targetId = link.getAttribute('href');
         const targetSection = select(targetId);
-        
+
         if (targetSection) {
             smoothScrollTo(targetSection, 1000);
         }
@@ -334,20 +334,20 @@ navLinks.forEach(link => {
 const buttons = selectAll('.btn');
 
 buttons.forEach(button => {
-    button.addEventListener('click', function(e) {
+    button.addEventListener('click', function (e) {
         const ripple = document.createElement('span');
         const rect = this.getBoundingClientRect();
         const size = Math.max(rect.width, rect.height);
         const x = e.clientX - rect.left - size / 2;
         const y = e.clientY - rect.top - size / 2;
-        
+
         ripple.style.width = ripple.style.height = size + 'px';
         ripple.style.left = x + 'px';
         ripple.style.top = y + 'px';
         ripple.classList.add('ripple');
-        
+
         this.appendChild(ripple);
-        
+
         setTimeout(() => ripple.remove(), 600);
     });
 });
@@ -383,15 +383,15 @@ if (!select('#ripple-styles')) {
 const magneticButtons = selectAll('.btn-primary, .social-link');
 
 magneticButtons.forEach(button => {
-    button.addEventListener('mousemove', function(e) {
+    button.addEventListener('mousemove', function (e) {
         const rect = this.getBoundingClientRect();
         const x = e.clientX - rect.left - rect.width / 2;
         const y = e.clientY - rect.top - rect.height / 2;
-        
+
         this.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
     });
-    
-    button.addEventListener('mouseleave', function() {
+
+    button.addEventListener('mouseleave', function () {
         this.style.transform = 'translate(0, 0)';
     });
 });
@@ -406,13 +406,13 @@ class TextScramble {
         this.chars = '!<>-_\\/[]{}—=+*^?#________';
         this.update = this.update.bind(this);
     }
-    
+
     setText(newText) {
         const oldText = this.el.innerText;
         const length = Math.max(oldText.length, newText.length);
         const promise = new Promise((resolve) => this.resolve = resolve);
         this.queue = [];
-        
+
         for (let i = 0; i < length; i++) {
             const from = oldText[i] || '';
             const to = newText[i] || '';
@@ -420,20 +420,20 @@ class TextScramble {
             const end = start + Math.floor(Math.random() * 40);
             this.queue.push({ from, to, start, end });
         }
-        
+
         cancelAnimationFrame(this.frameRequest);
         this.frame = 0;
         this.update();
         return promise;
     }
-    
+
     update() {
         let output = '';
         let complete = 0;
-        
+
         for (let i = 0, n = this.queue.length; i < n; i++) {
             let { from, to, start, end, char } = this.queue[i];
-            
+
             if (this.frame >= end) {
                 complete++;
                 output += to;
@@ -447,9 +447,9 @@ class TextScramble {
                 output += from;
             }
         }
-        
+
         this.el.innerHTML = output;
-        
+
         if (complete === this.queue.length) {
             this.resolve();
         } else {
@@ -457,7 +457,7 @@ class TextScramble {
             this.frame++;
         }
     }
-    
+
     randomChar() {
         return this.chars[Math.floor(Math.random() * this.chars.length)];
     }
@@ -468,7 +468,7 @@ const heroTitle = select('.hero-title .gradient-text');
 if (heroTitle) {
     const scramble = new TextScramble(heroTitle);
     const originalText = heroTitle.innerText;
-    
+
     heroTitle.addEventListener('mouseenter', () => {
         scramble.setText(originalText);
     });
@@ -492,7 +492,7 @@ const createScrollProgress = () => {
         transition: width 0.1s ease;
     `;
     document.body.appendChild(progressBar);
-    
+
     window.addEventListener('scroll', debounce(() => {
         const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -516,7 +516,7 @@ const createLoadingAnimation = () => {
             <p class="loader-text">Chargement...</p>
         </div>
     `;
-    
+
     Object.assign(loader.style, {
         position: 'fixed',
         top: '0',
@@ -530,9 +530,9 @@ const createLoadingAnimation = () => {
         zIndex: '99999',
         transition: 'opacity 0.5s ease'
     });
-    
+
     document.body.appendChild(loader);
-    
+
     window.addEventListener('load', () => {
         setTimeout(() => {
             loader.style.opacity = '0';
@@ -551,12 +551,12 @@ const createLoadingAnimation = () => {
 const animateCounter = (card) => {
     const numberElement = card.querySelector('.stat-number');
     if (!numberElement) return;
-    
+
     const target = parseInt(numberElement.getAttribute('data-target'));
     const duration = 2000;
     const increment = target / (duration / 16);
     let current = 0;
-    
+
     const updateCounter = () => {
         current += increment;
         if (current < target) {
@@ -566,9 +566,11 @@ const animateCounter = (card) => {
             numberElement.textContent = target;
         }
     };
-    
+
     updateCounter();
 };
+
+selectAll('.about-stats .stat-card').forEach(animateCounter);
 
 // ===================================
 // SCROLL TO TOP BUTTON
@@ -584,9 +586,9 @@ if (scrollTopBtn) {
             scrollTopBtn.classList.remove('visible');
         }
     }, 10);
-    
+
     window.addEventListener('scroll', toggleScrollTopBtn);
-    
+
     scrollTopBtn.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
@@ -604,22 +606,22 @@ const contactForm = select('#contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         const formData = new FormData(contactForm);
         const name = formData.get('name');
         const email = formData.get('email');
         const subject = formData.get('subject');
         const message = formData.get('message');
-        
+
         // Compose email
         const mailtoLink = `mailto:erwanoubda_tech@icloud.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-        
+
         // Open default email client
         window.location.href = mailtoLink;
-        
+
         // Show success message
         showNotification('Message préparé ! Votre client email va s\'ouvrir.', 'success');
-        
+
         // Reset form
         contactForm.reset();
     });
@@ -635,7 +637,7 @@ const showNotification = (message, type = 'info') => {
     if (existingNotification) {
         existingNotification.remove();
     }
-    
+
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
@@ -645,7 +647,7 @@ const showNotification = (message, type = 'info') => {
             <span>${message}</span>
         </div>
     `;
-    
+
     // Add styles
     Object.assign(notification.style, {
         position: 'fixed',
@@ -662,9 +664,9 @@ const showNotification = (message, type = 'info') => {
         alignItems: 'center',
         gap: '0.75rem'
     });
-    
+
     document.body.appendChild(notification);
-    
+
     // Remove after 4 seconds
     setTimeout(() => {
         notification.style.animation = 'slideOutRight 0.3s ease';
@@ -716,11 +718,11 @@ if (!select('#notification-styles')) {
 const projectCards = selectAll('.project-card');
 
 projectCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', function () {
         this.style.zIndex = '10';
     });
-    
-    card.addEventListener('mouseleave', function() {
+
+    card.addEventListener('mouseleave', function () {
         this.style.zIndex = '1';
     });
 });
@@ -745,15 +747,15 @@ timelineItems.forEach(item => {
 const certCards = selectAll('.cert-card');
 
 certCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', function () {
         const logo = this.querySelector('.cert-logo');
         if (logo) {
             logo.style.transform = 'scale(1.1) rotate(5deg)';
             logo.style.transition = 'transform 0.3s ease';
         }
     });
-    
-    card.addEventListener('mouseleave', function() {
+
+    card.addEventListener('mouseleave', function () {
         const logo = this.querySelector('.cert-logo');
         if (logo) {
             logo.style.transform = 'scale(1) rotate(0deg)';
@@ -788,7 +790,7 @@ if (heroSection) {
     window.addEventListener('scroll', debounce(() => {
         const scrolled = window.pageYOffset;
         const heroBackground = select('.hero-background');
-        
+
         if (heroBackground && scrolled < heroSection.offsetHeight) {
             heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
         }
@@ -881,7 +883,7 @@ window.addEventListener('load', () => {
         loader.style.opacity = '0';
         setTimeout(() => loader.remove(), 300);
     }
-    
+
     // Log portfolio loaded
     console.log('%c✨ Portfolio Loaded Successfully! ✨', 'color: #3b82f6; font-size: 16px; font-weight: bold;');
     console.log('%cDeveloped by Erwan Oubda', 'color: #8b5cf6; font-size: 14px;');
@@ -909,9 +911,9 @@ const socialLinks = selectAll('.social-link, .contact-social a');
 
 socialLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-        const platform = link.href.includes('github') ? 'GitHub' : 
-                        link.href.includes('linkedin') ? 'LinkedIn' : 
-                        link.href.includes('mailto') ? 'Email' : 'Social';
+        const platform = link.href.includes('github') ? 'GitHub' :
+            link.href.includes('linkedin') ? 'LinkedIn' :
+                link.href.includes('mailto') ? 'Email' : 'Social';
         console.log(`${platform} link clicked`);
     });
 });
@@ -931,7 +933,7 @@ const trackSectionVisibility = () => {
     }, {
         threshold: 0.5
     });
-    
+
     sections.forEach(section => sectionObserver.observe(section));
 };
 
@@ -955,15 +957,15 @@ if (window.innerWidth > 768) {
         transition: 'transform 0.15s ease',
         display: 'none'
     });
-    
+
     document.body.appendChild(cursor);
-    
+
     document.addEventListener('mousemove', (e) => {
         cursor.style.display = 'block';
         cursor.style.left = `${e.clientX - 10}px`;
         cursor.style.top = `${e.clientY - 10}px`;
     });
-    
+
     // Scale cursor on interactive elements
     const interactiveElements = selectAll('a, button, .project-card, .cert-card');
     interactiveElements.forEach(el => {
@@ -985,11 +987,11 @@ if (window.innerWidth > 768) {
 const createBackgroundPattern = () => {
     const heroGrid = select('.hero-grid');
     if (!heroGrid) return;
-    
+
     // Add subtle animation to grid
     let opacity = 0.05;
     let increasing = true;
-    
+
     setInterval(() => {
         if (increasing) {
             opacity += 0.001;
@@ -998,7 +1000,7 @@ const createBackgroundPattern = () => {
             opacity -= 0.001;
             if (opacity <= 0.05) increasing = true;
         }
-        
+
         heroGrid.style.backgroundImage = `
             linear-gradient(rgba(59, 130, 246, ${opacity}) 1px, transparent 1px),
             linear-gradient(90deg, rgba(59, 130, 246, ${opacity}) 1px, transparent 1px)
