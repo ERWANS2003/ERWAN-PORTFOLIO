@@ -2205,3 +2205,112 @@ img {
         page-break-inside: avoid;
     }
 }
+
+/* ===================================
+   PORTFOLIO 3D
+   =================================== */
+
+/* Scène WebGL fixe derrière tout le contenu */
+#bg3d {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+
+#bg3d.is-ready {
+    opacity: 1;
+}
+
+/* Les sections laissent voir la scène */
+.about,
+.projects,
+.skills {
+    background: transparent;
+}
+
+.experience,
+.certifications,
+.contact {
+    background: rgba(1, 4, 9, 0.55);
+}
+
+.footer {
+    background: rgba(22, 27, 34, 0.85);
+}
+
+/* L'objet 3D remplace la fenêtre de code comme visuel du hero.
+   La colonne reste réservée sur grand écran pour garder le texte à gauche. */
+.hero-visual {
+    visibility: hidden;
+    animation: none;
+}
+
+/* Cartes légèrement translucides pour garder la profondeur */
+.project-card,
+.cert-card,
+.skill-category,
+.timeline-content,
+.contact-card,
+.contact-form-wrapper,
+.highlight-item {
+    background-color: rgba(22, 27, 34, 0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.highlight-item {
+    border: 1px solid var(--border-default);
+}
+
+.tilt-3d {
+    transition: transform 0.2s ease-out, box-shadow var(--transition-base), border-color var(--transition-base);
+    will-change: transform;
+}
+
+/* Sphère de technologies */
+.tech-sphere {
+    position: relative;
+    width: min(420px, 86vw);
+    aspect-ratio: 1;
+    margin: 0 auto var(--spacing-xl);
+    touch-action: pan-y;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.tech-sphere.is-ready {
+    opacity: 1;
+}
+
+.tech-tag {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0.3rem 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--accent-primary);
+    background: rgba(13, 17, 23, 0.85);
+    border: 1px solid var(--primary-light);
+    border-radius: var(--radius-full);
+    user-select: none;
+    will-change: transform, opacity;
+}
+
+.tech-tag:nth-child(3n) {
+    color: var(--accent-color);
+    border-color: rgba(163, 113, 247, 0.4);
+}
+
+@media (max-width: 1024px) {
+    .hero-visual {
+        display: none;
+    }
+}

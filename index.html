@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <canvas id="bg3d" aria-hidden="true"></canvas>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container">
@@ -364,7 +365,7 @@
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop" alt="Plateforme Patronymes">
                         <div class="project-overlay">
-                            <a href="#" class="project-link">
+                            <a href="https://patronymes-project.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Voir la plateforme des patronymes en ligne">
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
                         </div>
@@ -535,6 +536,28 @@
             <div class="section-header">
                 <span class="section-tag">EXPERTISE</span>
                 <h2 class="section-title">Compétences Techniques</h2>
+            </div>
+            <div class="tech-sphere" id="techSphere" aria-hidden="true">
+                <span class="tech-tag">Laravel</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">C/C++</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Git</span>
+                <span class="tech-tag">GitHub</span>
+                <span class="tech-tag">Linux</span>
+                <span class="tech-tag">UML</span>
+                <span class="tech-tag">MERISE</span>
+                <span class="tech-tag">Bootstrap</span>
+                <span class="tech-tag">SIEM</span>
+                <span class="tech-tag">2TUP</span>
             </div>
             <div class="skills-container">
                 <div class="skill-category">
@@ -873,5 +896,7 @@
     </button>
 
     <script src="./script.js"></script>
+    <script src="./effects3d.js"></script>
+    <script type="module" src="./scene3d.js"></script>
 </body>
 </html>
