@@ -548,6 +548,100 @@ footer { text-align: center; padding: 2rem 0 0; font-size: 0.85rem; color: var(-
     html { scroll-behavior: auto; }
 }
 a:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+
+/* =====================================================
+   FINITIONS : lisibilité, rythme et détails graphiques
+   ===================================================== */
+:root { --green-deep: #0a6e3d; --seal-ink: #07663a; --shadow-soft: 0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 18px 40px -34px rgba(34, 48, 107, 0.55); }
+:root[data-theme="dark"] { --seal-ink: #6fdca6; --shadow-soft: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 18px 40px -30px rgba(0, 0, 0, 0.8); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --seal-ink: #6fdca6; --shadow-soft: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 18px 40px -30px rgba(0, 0, 0, 0.8); } }
+
+/* Titres équilibrés, paragraphes sans mot orphelin */
+h1, h2, h3 { text-wrap: balance; }
+p, .org { text-wrap: pretty; }
+
+/* Focus clavier visible partout, y compris sur les tuiles jaunes */
+a:focus-visible, button:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; box-shadow: 0 0 0 3px var(--ink-fixed); }
+.t-place a:focus-visible, .t-video a:focus-visible, .t-video button:focus-visible { outline-color: var(--ink-fixed); box-shadow: 0 0 0 3px var(--yellow); }
+
+/* Monogramme : lettres centrées au-dessus de la bande tissée */
+.brand .mark { padding-bottom: 5px; letter-spacing: 0.02em; box-shadow: 0 6px 14px -8px rgba(34, 48, 107, 0.7); }
+.brand:hover .mark { transform: rotate(-6deg); }
+.brand .mark { transition: transform 0.25s; }
+
+/* Profondeur douce des tuiles */
+.tile, .step { box-shadow: var(--shadow-soft); }
+.t-intro, .t-status, .t-place, .t-video { box-shadow: 0 22px 44px -30px rgba(34, 48, 107, 0.6); }
+
+/* Contrastes AA sur les tuiles colorées */
+.t-status { background: var(--green-deep); }
+.t-status .label { color: rgba(255, 255, 255, 0.88); }
+.t-status p { color: rgba(255, 255, 255, 0.94); }
+.t-place .label { color: rgba(29, 26, 22, 0.78); }
+.t-video .label { color: rgba(29, 26, 22, 0.78); }
+.contact .label { color: #fff; }
+.seal { color: var(--seal-ink); background: rgba(12, 138, 76, 0.14); }
+.step.now .kind { background: var(--green-deep); }
+
+/* Étape en cours : reste sombre et lisible dans les deux thèmes */
+.step.now { background: var(--ink-fixed); color: var(--paper); border-color: var(--ink-fixed); }
+.step.now .org, .step.now time { color: rgba(247, 241, 229, 0.78); }
+:root[data-theme="dark"] .step.now { background: var(--indigo); border-color: #33448f; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .step.now { background: var(--indigo); border-color: #33448f; } }
+.step { transition: transform 0.25s, border-color 0.25s; }
+.step:not(.now):hover { border-color: var(--muted); transform: translateX(4px); }
+.step time { font-variant-numeric: tabular-nums; }
+
+/* Cartes projet : cadrage des captures et séparation image / texte */
+.t-project img { object-position: center top; transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.t-project .media { overflow: hidden; border-bottom: 1px solid var(--line); }
+.t-project.wide .media { border-bottom: 0; border-left: 1px solid var(--line); }
+.t-project.wide .media:first-child { border-left: 0; border-right: 1px solid var(--line); }
+.t-project:hover img { transform: scale(1.025); }
+.t-project .tag { z-index: 1; color: var(--ink); box-shadow: 0 4px 12px -6px rgba(0, 0, 0, 0.35); }
+.t-project .go, .t-cert .verify, .t-video .go { transition: color 0.2s, background 0.2s, border-color 0.2s; }
+.t-project .go:hover { color: var(--red); }
+.t-project .content { gap: 0.75rem; }
+.chips span { line-height: 1.4; border: 1px solid transparent; }
+:root[data-theme="dark"] .chips span { border-color: rgba(255, 255, 255, 0.05); }
+
+/* Certifications : vrai logo « G » sur fond clair */
+.google .issuer { color: #4285f4; background: #fff; border: 3px solid transparent; background-image: linear-gradient(#fff, #fff), conic-gradient(#ea4335 0 25%, #4285f4 0 50%, #34a853 0 75%, #fbbc05 0); background-origin: border-box; background-clip: padding-box, border-box; text-shadow: none; font-size: 1.35rem; }
+.issuer { box-shadow: 0 8px 18px -10px rgba(0, 0, 0, 0.45); }
+.t-cert .meta { font-variant-numeric: tabular-nums; }
+
+/* Montage : chiffres et contrôles plus nets */
+.t-video .figures div { box-shadow: 0 1px 0 rgba(29, 26, 22, 0.08); }
+.t-video .figures span { color: var(--muted); line-height: 1.3; display: block; margin-top: 0.15rem; }
+.t-video .chips span { color: var(--ink-fixed); }
+
+/* Contact et pied de page */
+.contact .links a { transition: border-color 0.2s; }
+.contact .links a:hover { border-bottom-color: #fff; }
+.copy { transition: background 0.2s; }
+footer { padding-bottom: 1rem; }
+footer::before { content: ''; display: block; width: 64px; height: 6px; margin: 0 auto 1rem; border-radius: 3px; background: var(--weave); background-size: 64px 100%; }
+
+/* Bouton « haut de page » et notification */
+.to-top { display: grid; place-items: center; }
+.to-top:hover { transform: translateY(-3px); }
+.toast { border-top: 4px solid var(--yellow); }
+
+/* Tablette : disponibilité et ville côte à côte */
+@media (min-width: 600px) and (max-width: 960px) {
+    .t-status, .t-place { grid-column: span 6; }
+}
+@media (max-width: 600px) {
+    .to-top { width: 44px; height: 44px; right: 0.8rem; bottom: 0.8rem; font-size: 1.05rem; }
+    footer { padding-bottom: 3.6rem; }
+    .t-project .tag { top: 0.75rem; left: 0.75rem; }
+}
+@media (max-width: 960px) {
+    .t-project.wide .media, .t-project.wide .media:first-child { border-left: 0; border-right: 0; border-bottom: 1px solid var(--line); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .t-project:hover img, .step:not(.now):hover, .to-top:hover, .brand:hover .mark { transform: none; }
+}
 </style>
 </head>
 <body>
@@ -886,7 +980,7 @@ a:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
         </section>
 
         <section class="contact" id="contact">
-            <span class="label" style="color:rgba(255,255,255,.75)">Contact</span>
+            <span class="label">Contact</span>
             <h2>Construisons quelque chose ensemble.</h2>
             <div class="mail-row">
                 <a class="mail" href="mailto:erwanoubda_tech@icloud.com">erwanoubda_tech@icloud.com</a>
