@@ -1,941 +1,793 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Erwan Oubda - Ingénieur Informatique spécialisé en Développement Web & Systèmes d'Information. Expert Laravel, React, PHP, Python et Cybersécurité.">
-    <meta name="keywords"
-        content="Développeur Web, Ingénieur Informatique, Laravel, React, PHP, Python, Cybersécurité, Burkina Faso">
-    <meta name="author" content="Oubda Wendnongdo Erwan">
-    <title>Erwan Oubda | Ingénieur Informatique</title>
-    <link rel="icon" href="./favicon.ico">
-    <link rel="apple-touch-icon" href="./logo192.png">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <link rel="stylesheet" href="./styles.css">
-</head>
-
-<body>
-    <canvas id="bg3d" aria-hidden="true"></canvas>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <a href="#home" class="logo">
-                <span class="logo-text">ERWAN</span>
-                <span class="logo-dot">.</span>
-            </a>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link active">Accueil</a></li>
-                <li><a href="#about" class="nav-link">À propos</a></li>
-                <li><a href="#experience" class="nav-link">Expérience</a></li>
-                <li><a href="#projects" class="nav-link">Projets</a></li>
-                <li><a href="#certifications" class="nav-link">Certifications</a></li>
-                <li><a href="#skills" class="nav-link">Compétences</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-controls">
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background"></div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <div class="hero-tag">
-                        <i class="fas fa-circle pulse"></i>
-                        <span>Disponible pour de nouvelles opportunités</span>
-                    </div>
-                    <h1 class="hero-title">
-                        Bonjour, je suis
-                        <span class="gradient-text">Erwan Oubda</span>
-                    </h1>
-                    <h2 class="hero-subtitle">
-                        Ingénieur Informatique —
-                        <span class="typed-text"></span>
-                        <span class="cursor">|</span>
-                    </h2>
-                    <p class="hero-description">
-                        Étudiant en master de génie informatique, passionné par le développement web et mobile.
-                        Je crée des applications performantes avec Laravel, React, et PostgreSQL.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">
-                            <span>Me Contacter</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="./static/media/CV Erwan OUBDA 2026.2f3997321739e8779cd7.pdf" download
-                            class="btn btn-secondary">
-                            <i class="fas fa-download"></i>
-                            <span>Télécharger CV</span>
-                        </a>
-                    </div>
-                    <div class="hero-social">
-                        <a href="https://github.com/erwanoubda" target="_blank" rel="noopener noreferrer"
-                            class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/wendnongdo-erwan-oubda-a9b062359" target="_blank"
-                            rel="noopener noreferrer" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:erwanoubda_tech@icloud.com" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="code-window">
-                        <div class="code-header">
-                            <div class="code-dots">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <span class="code-title">portfolio.php</span>
-                        </div>
-                        <div class="code-content">
-                            <pre><code><span class="code-keyword">&lt;?php</span>
-
-<span class="code-keyword">class</span> <span class="code-class">Developer</span> {
-    <span class="code-keyword">public function</span> <span class="code-function">__construct</span>() {
-        <span class="code-variable">$this</span>-><span class="code-property">name</span> = <span class="code-string">"Erwan Oubda"</span>;
-        <span class="code-variable">$this</span>-><span class="code-property">role</span> = <span class="code-string">"Ingénieur Informatique"</span>;
-        <span class="code-variable">$this</span>-><span class="code-property">location</span> = <span class="code-string">"Ouagadougou, BF"</span>;
-    }
-    
-    <span class="code-keyword">public function</span> <span class="code-function">getSkills</span>() {
-        <span class="code-keyword">return</span> [
-            <span class="code-string">"Laravel"</span>, <span class="code-string">"React"</span>, <span class="code-string">"PHP"</span>,
-            <span class="code-string">"Python"</span>, <span class="code-string">"PostgreSQL"</span>
-        ];
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erwan Oubda · Ingénieur informatique et monteur vidéo · Ouagadougou</title>
+<meta name="description" content="Erwan Oubda, ingénieur informatique et monteur vidéo à Ouagadougou : applications web avec Laravel, React et PostgreSQL, montage YouTube.">
+<meta name="author" content="Erwan Oubda">
+<meta name="theme-color" content="#22306b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Erwan Oubda · Ingénieur informatique et monteur vidéo">
+<meta property="og:description" content="Applications web avec Laravel, React et PostgreSQL, et montage vidéo pour des créateurs YouTube. Basé à Ouagadougou.">
+<meta property="og:image" content="https://erwans2003.github.io/ERWAN-PORTFOLIO/assets/projects/patronymes.webp">
+<meta property="og:url" content="https://erwans2003.github.io/ERWAN-PORTFOLIO/">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="./favicon.ico">
+<link rel="apple-touch-icon" href="./logo192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* =====================================================
+   REFONTE 3 — FASO DAN FANI
+   Une identité chaleureuse et ancrée : couleurs du Burkina,
+   bandes inspirées du pagne tissé, grille « bento ».
+   ===================================================== */
+:root {
+    --cream: #f7f1e5;
+    --sand: #efe4cf;
+    --ink: #1d1a16;
+    --muted: #6b6255;
+    --red: #d6332f;
+    --green: #0c8a4c;
+    --yellow: #f4b819;
+    --indigo: #22306b;
+    --card: #fffaf0;
+    --line: #e4d7bd;
+    --display: 'Bricolage Grotesque', 'Segoe UI', sans-serif;
+    --sans: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+    --radius: 26px;
+    --edge: clamp(1rem, 4vw, 2.5rem);
+    /* Bande tissée : fines rayures colorées façon Faso Dan Fani */
+    --weave: repeating-linear-gradient(90deg,
+        var(--indigo) 0 14px, var(--cream) 14px 18px,
+        var(--red) 18px 30px, var(--yellow) 30px 34px,
+        var(--green) 34px 50px, var(--cream) 50px 54px,
+        var(--indigo) 54px 60px, var(--yellow) 60px 64px);
 }
 
-<span class="code-variable">$erwan</span> = <span class="code-keyword">new</span> <span class="code-class">Developer</span>();
-<span class="code-function">echo</span> <span class="code-string">"Ready to build amazing things!"</span>;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--cream);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+}
+a { color: inherit; }
+img { display: block; max-width: 100%; }
 
-<span class="code-keyword">?&gt;</span></code></pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <span>Scroll</span>
-        </div>
-    </section>
+/* Bande tissée : la trame (fils horizontaux sombres) passe sur la chaîne colorée */
+.weave {
+    height: 16px;
+    background:
+        repeating-linear-gradient(0deg, rgba(29, 26, 22, 0.22) 0 1px, transparent 1px 3px),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.14) 0 1px, transparent 1px 4px),
+        var(--weave);
+    background-size: auto, auto, 128px 100%;
+    animation: weave-drift 18s linear infinite;
+}
+.weave.thin { height: 8px; animation-direction: reverse; }
+@keyframes weave-drift { to { background-position: 0 0, 0 0, 128px 0; } }
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">À PROPOS</span>
-                <h2 class="section-title">Qui suis-je ?</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-intro">
-                        Étudiant en <strong>Master Management des Systèmes d'Information</strong> à l'Université Aube
-                        Nouvelle,
-                        je suis passionné par le développement web et la création de solutions numériques innovantes.
-                    </p>
+/* Grain de tissu très léger sur toute la page */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Apparition au défilement */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); transition-delay: var(--d, 0s); }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+.page { max-width: 1240px; margin: 0 auto; padding: 0 var(--edge) 3rem; }
+
+/* ---------- En-tête ---------- */
+.top {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem 0;
+    transition: padding 0.3s, background 0.3s, box-shadow 0.3s;
+}
+.top.is-stuck {
+    padding: 0.6rem 1rem;
+    margin: 0 -1rem;
+    background: rgba(247, 241, 229, 0.86);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 10px 30px -18px rgba(34, 48, 107, 0.45);
+}
+.brand { display: flex; align-items: center; gap: 0.7rem; font-family: var(--display); font-weight: 800; font-size: 1.15rem; text-decoration: none; }
+.brand .mark {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    color: var(--yellow);
+    background: var(--indigo);
+    font-size: 0.95rem;
+    overflow: hidden;
+}
+.brand .mark::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: var(--weave); background-size: 64px 100%; }
+.top nav { display: flex; gap: 0.4rem; }
+.top nav a { padding: 0.5rem 0.95rem; font-size: 0.9rem; font-weight: 500; text-decoration: none; border-radius: 999px; }
+.top nav a:hover { background: var(--sand); }
+.top .cta { padding: 0.6rem 1.1rem; font-weight: 600; font-size: 0.9rem; color: var(--cream); background: var(--ink); border-radius: 999px; text-decoration: none; }
+.top .cta:hover { background: var(--red); }
+
+/* ---------- Grille bento ---------- */
+.bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; }
+.tile {
+    position: relative;
+    padding: clamp(1.3rem, 2.4vw, 2rem);
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+.label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+
+.t-intro { grid-column: span 8; grid-row: span 2; display: flex; flex-direction: column; justify-content: space-between; min-height: 430px; background: var(--indigo); color: var(--cream); border: none; }
+.t-intro::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 16px;
+    background:
+        repeating-linear-gradient(0deg, rgba(29, 26, 22, 0.22) 0 1px, transparent 1px 3px),
+        var(--weave);
+    background-size: auto, 128px 100%;
+    animation: weave-drift 18s linear infinite;
+}
+.t-intro::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(420px circle at var(--mx, 75%) var(--my, 20%), rgba(244, 184, 25, 0.22), transparent 60%),
+        repeating-linear-gradient(45deg, rgba(244, 184, 25, 0.07) 0 2px, transparent 2px 22px),
+        repeating-linear-gradient(-45deg, rgba(214, 51, 47, 0.07) 0 2px, transparent 2px 22px);
+    -webkit-mask-image: linear-gradient(115deg, transparent 30%, #000 85%);
+    mask-image: linear-gradient(115deg, transparent 30%, #000 85%);
+}
+.t-intro > * { position: relative; z-index: 1; }
+.t-intro .label { color: rgba(247, 241, 229, 0.65); }
+.t-intro h1 { font-family: var(--display); font-weight: 800; font-size: clamp(2.5rem, 6vw, 5.2rem); line-height: 0.98; letter-spacing: -0.035em; margin-top: 1rem; }
+.t-intro h1 .y { color: var(--yellow); }
+.t-intro p { max-width: 36rem; font-size: 1.08rem; color: rgba(247, 241, 229, 0.85); margin-top: 1.4rem; }
+.t-intro .row { display: flex; flex-wrap: wrap; gap: 0.7rem; margin: 1.8rem 0 0.6rem; }
+.pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.2rem; font-weight: 600; font-size: 0.92rem; border-radius: 999px; text-decoration: none; transition: transform 0.2s; }
+.pill:hover { transform: translateY(-2px); }
+.pill.yellow { background: var(--yellow); color: var(--ink); }
+.pill.ghost { color: var(--cream); border: 1.5px solid rgba(247, 241, 229, 0.4); }
+
+.t-status { grid-column: span 4; background: var(--green); color: #fff; border: none; }
+.t-status .label { color: rgba(255, 255, 255, 0.75); }
+.t-status strong { display: block; margin-top: 0.8rem; font-family: var(--display); font-size: 1.7rem; line-height: 1.1; }
+.t-status p { margin-top: 0.5rem; font-size: 0.92rem; color: rgba(255, 255, 255, 0.85); }
+.pulse { display: inline-block; width: 10px; height: 10px; margin-right: 0.5rem; border-radius: 50%; background: #b9f6ca; animation: pulse 1.8s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(185, 246, 202, 0.7); } 70% { box-shadow: 0 0 0 12px rgba(185, 246, 202, 0); } 100% { box-shadow: 0 0 0 0 rgba(185, 246, 202, 0); } }
+
+.t-place { grid-column: span 4; background: var(--yellow); border: none; }
+.t-place .label { color: rgba(29, 26, 22, 0.6); }
+.t-place .city { font-family: var(--display); font-weight: 800; font-size: 2.2rem; line-height: 1; margin-top: 0.7rem; }
+.t-place .clock { font-family: var(--display); font-size: 1.05rem; margin-top: 0.4rem; }
+.t-place .sun { position: absolute; right: -30px; bottom: -30px; width: 130px; height: 130px; border-radius: 50%; background: var(--red); opacity: 0.9; }
+
+.t-stat::after, .t-project::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 6px;
+    background: var(--weave);
+    background-size: 64px 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.t-stat:hover::after, .t-project:hover::after { transform: scaleX(1); }
+.t-stat { transition: transform 0.25s; }
+.t-stat:hover { transform: translateY(-4px); }
+.t-stat { grid-column: span 3; display: flex; flex-direction: column; justify-content: space-between; min-height: 150px; }
+.t-stat b { font-family: var(--display); font-weight: 800; font-size: 3.2rem; line-height: 1; }
+.t-stat:nth-of-type(odd) b { color: var(--red); }
+.t-stat:nth-of-type(even) b { color: var(--indigo); }
+
+/* ---------- Sections ---------- */
+.section-title { position: relative; display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin: 5rem 0 1.3rem; padding-top: 1.4rem; }
+.section-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 8px;
+    border-radius: 4px;
+    background:
+        repeating-linear-gradient(0deg, rgba(29, 26, 22, 0.22) 0 1px, transparent 1px 3px),
+        var(--weave);
+    background-size: auto, 64px 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s;
+}
+.section-title.is-visible::before { transform: scaleX(1); }
+.section-title h2 { font-family: var(--display); font-weight: 800; font-size: clamp(2rem, 4.5vw, 3.4rem); letter-spacing: -0.03em; line-height: 1; }
+.section-title p { color: var(--muted); max-width: 26rem; font-size: 0.95rem; }
+
+.t-project { grid-column: span 6; padding: 0; display: flex; flex-direction: column; transition: transform 0.25s, box-shadow 0.25s; }
+.t-project:hover { transform: translateY(-4px); box-shadow: 0 24px 50px -28px rgba(34, 48, 107, 0.45); }
+.t-project.wide { grid-column: span 12; display: grid; grid-template-columns: 1.3fr 1fr; }
+.t-project .media { position: relative; background: var(--sand); }
+.t-project img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+.t-project.wide .media { min-height: 100%; }
+.t-project.wide .media img { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; }
+@media (max-width: 960px) { .t-project.wide .media img { position: static; height: auto; aspect-ratio: 16 / 10; } .t-project.wide .media { order: -1; } }
+.t-project .tag { position: absolute; top: 1rem; left: 1rem; padding: 0.3rem 0.75rem; font-size: 0.75rem; font-weight: 600; background: var(--card); border-radius: 999px; }
+.t-project .content { padding: clamp(1.3rem, 2.4vw, 2rem); display: flex; flex-direction: column; gap: 0.7rem; flex: 1; }
+.t-project h3 { font-family: var(--display); font-weight: 800; font-size: clamp(1.4rem, 2.4vw, 2rem); line-height: 1.1; letter-spacing: -0.02em; }
+.t-project p { color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: auto; padding-top: 0.5rem; }
+.chips span { padding: 0.3rem 0.75rem; font-size: 0.82rem; font-weight: 500; background: var(--sand); border-radius: 999px; }
+.t-project .go { align-self: flex-start; margin-top: 0.4rem; font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--red); }
+
+/* Montage vidéo */
+.t-video { grid-column: span 12; display: grid; grid-template-columns: 1fr 1.1fr; gap: 0; padding: 0; background: var(--yellow); border: none; }
+.t-video .content { padding: clamp(1.5rem, 3vw, 2.6rem); display: flex; flex-direction: column; gap: 0.9rem; }
+.t-video .label { color: rgba(29, 26, 22, 0.65); }
+.t-video h3 { font-family: var(--display); font-weight: 800; font-size: clamp(1.8rem, 3.4vw, 2.8rem); line-height: 1.02; letter-spacing: -0.03em; }
+.t-video p { color: rgba(29, 26, 22, 0.8); }
+.t-video .figures { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.7rem; margin-top: 0.4rem; }
+.t-video .figures div { padding: 0.8rem 0.9rem; background: var(--card); border-radius: 16px; }
+.t-video .figures b { display: block; font-family: var(--display); font-weight: 800; font-size: 1.6rem; line-height: 1.05; color: var(--red); }
+.t-video .figures span { font-size: 0.8rem; color: var(--muted); }
+.t-video .chips span { background: rgba(255, 250, 240, 0.75); }
+.t-video .go { align-self: flex-start; margin-top: 0.4rem; padding: 0.8rem 1.3rem; font-weight: 700; color: #fff; background: var(--red); border-radius: 999px; text-decoration: none; }
+.t-video .go:hover { background: var(--ink); }
+.t-video .media { position: relative; min-height: 280px; }
+.editor {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: clamp(1rem, 2.2vw, 1.6rem);
+    background: #161310;
+    color: #f7f1e5;
+    font-family: 'JetBrains Mono', Consolas, monospace;
+}
+.monitor { border-radius: 14px; overflow: hidden; background: #0d0b09; border: 1px solid #2b2620; }
+.screen {
+    position: relative;
+    aspect-ratio: 16 / 8;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--red), #8f1d1a 45%, #1d1a16);
+}
+.screen::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(45deg, rgba(244, 184, 25, 0.12) 0 2px, transparent 2px 18px);
+}
+.screen .safe { position: absolute; inset: 10%; border: 1px dashed rgba(247, 241, 229, 0.25); border-radius: 6px; }
+.screen .rec { position: absolute; top: 10px; left: 12px; font-size: 0.68rem; font-weight: 700; color: #fff; }
+.screen .rec::first-letter { color: #ff4d4d; }
+.screen .fmt { position: absolute; top: 10px; right: 12px; font-size: 0.68rem; color: rgba(247, 241, 229, 0.7); }
+.words { position: relative; height: 1.1em; font-family: var(--display); font-weight: 800; font-size: clamp(1.8rem, 4vw, 3rem); letter-spacing: -0.02em; line-height: 1.1; overflow: hidden; }
+.words span { display: block; text-align: center; color: var(--yellow); text-shadow: 3px 3px 0 var(--ink); animation: words 9s infinite; }
+@keyframes words {
+    0%, 28% { transform: translateY(0); }
+    33%, 61% { transform: translateY(-100%); }
+    66%, 94% { transform: translateY(-200%); }
+    100% { transform: translateY(0); }
+}
+.transport { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; padding: 0.55rem 0.8rem; font-size: 0.72rem; color: rgba(247, 241, 229, 0.7); border-top: 1px solid #2b2620; }
+.transport .tc { color: var(--yellow); font-weight: 700; font-variant-numeric: tabular-nums; }
+.timeline { position: relative; display: grid; gap: 6px; padding: 10px 10px 10px 0; border-radius: 14px; background: #0d0b09; border: 1px solid #2b2620; }
+.ruler { margin-left: 38px; height: 10px; background: repeating-linear-gradient(90deg, rgba(247, 241, 229, 0.35) 0 1px, transparent 1px 10%), repeating-linear-gradient(90deg, rgba(247, 241, 229, 0.15) 0 1px, transparent 1px 2.5%); }
+.track { display: grid; grid-template-columns: 38px 1fr; align-items: center; }
+.track .lbl { font-size: 0.65rem; color: rgba(247, 241, 229, 0.5); text-align: center; }
+.lane { position: relative; height: 24px; border-radius: 6px; background: rgba(247, 241, 229, 0.04); }
+.clip {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+    font-size: 0.62rem;
+    font-style: normal;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 5px;
+    color: var(--ink);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+.c-video { background: var(--yellow); }
+.c-alt { background: #f8d465; }
+.c-title { background: #f7f1e5; }
+.c-fx { background: var(--green); color: #fff; }
+.c-voice, .c-music { color: #fff; }
+.c-voice { background: var(--indigo); }
+.c-music { background: var(--red); }
+.wave { background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.35) 0 2px, transparent 2px 4px); background-size: 100% 60%; background-repeat: repeat-x; background-position: 0 center; }
+.c-voice.wave { background-color: var(--indigo); }
+.c-music.wave { background-color: var(--red); }
+.playhead { position: absolute; top: 4px; bottom: 4px; left: 38px; width: 2px; background: #ff4d4d; box-shadow: 0 0 10px #ff4d4d; transform: translateX(var(--ph, 0px)); }
+.playhead::before { content: ''; position: absolute; top: -4px; left: -5px; border: 6px solid transparent; border-top: 8px solid #ff4d4d; }
+.editor .tag { align-self: flex-start; padding: 0.3rem 0.75rem; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; background: var(--yellow); color: var(--ink); border-radius: 999px; }
+
+/* Parcours en bandes tissées */
+.path { display: grid; gap: 12px; }
+.step { display: grid; grid-template-columns: 9rem 1fr auto; gap: 1.5rem; align-items: center; padding: 1.3rem 1.6rem; background: var(--card); border: 1px solid var(--line); border-radius: 20px; position: relative; overflow: hidden; }
+.step::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 8px; background: var(--weave); background-size: 64px 100%; transform: rotate(0); }
+.step time { font-family: var(--display); font-weight: 600; color: var(--muted); }
+.step h3 { font-family: var(--display); font-size: 1.25rem; line-height: 1.2; }
+.step .org { color: var(--muted); font-size: 0.92rem; }
+.step .kind { font-size: 0.78rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 999px; background: var(--sand); white-space: nowrap; }
+.step.now { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+.step.now .org, .step.now time { color: rgba(247, 241, 229, 0.7); }
+.step.now .kind { background: var(--green); color: #fff; }
+
+/* Compétences et certifications */
+.t-skills { grid-column: span 7; }
+.t-certs { grid-column: span 5; background: var(--indigo); color: var(--cream); border: none; }
+.t-certs .label { color: rgba(247, 241, 229, 0.65); }
+.skill-row { margin-top: 1.3rem; }
+.skill-row h3 { font-size: 0.85rem; font-weight: 600; color: var(--muted); margin-bottom: 0.6rem; }
+.skill-row .chips span { font-size: 0.9rem; padding: 0.4rem 0.9rem; }
+.skill-row .chips span.hot { background: var(--red); color: #fff; }
+.cert { display: block; padding: 1rem 0; border-top: 1px solid rgba(247, 241, 229, 0.18); text-decoration: none; }
+.cert:first-of-type { margin-top: 1rem; }
+.cert b { display: block; font-family: var(--display); font-size: 1.12rem; line-height: 1.3; }
+.cert span { font-size: 0.85rem; color: rgba(247, 241, 229, 0.7); }
+.cert:hover b { color: var(--yellow); }
+
+/* Contact */
+.contact { margin-top: 4.5rem; padding: clamp(2.2rem, 6vw, 4.5rem); border-radius: 32px; background: var(--red); color: #fff; position: relative; overflow: hidden; }
+.contact::after { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 14px; background: var(--weave); }
+.contact h2 { font-family: var(--display); font-weight: 800; font-size: clamp(2.4rem, 7vw, 5.6rem); line-height: 0.95; letter-spacing: -0.035em; max-width: 12ch; }
+.contact .mail { display: inline-block; margin-top: 2rem; padding: 1rem 1.6rem; font-family: var(--display); font-weight: 600; font-size: clamp(1rem, 2.6vw, 1.5rem); color: var(--ink); background: var(--cream); border-radius: 999px; text-decoration: none; }
+.contact .mail:hover { background: var(--yellow); }
+.contact .links { display: flex; flex-wrap: wrap; gap: 1.4rem; margin-top: 1.6rem; font-weight: 500; }
+.contact .links a { text-decoration: none; border-bottom: 1.5px solid rgba(255, 255, 255, 0.5); }
+
+footer { text-align: center; padding: 2rem 0 0; font-size: 0.85rem; color: var(--muted); }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 960px) {
+    .t-intro, .t-status, .t-place, .t-skills, .t-certs, .t-project, .t-project.wide, .t-video { grid-column: span 12; }
+    .t-video { grid-template-columns: 1fr; }
+    .t-video .media { min-height: 220px; order: -1; }
+    .section-title { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
+    .t-video .figures { gap: 0.5rem; }
+    .t-video .figures div { padding: 0.65rem 0.6rem; }
+    .t-video .figures b { font-size: 1.15rem; white-space: nowrap; }
+    .t-video .figures span { font-size: 0.75rem; }
+    .t-stat { grid-column: span 6; }
+    .t-project.wide { grid-template-columns: 1fr; }
+    .top nav { display: none; }
+    .step { grid-template-columns: 1fr; gap: 0.4rem; }
+    .step .kind { justify-self: start; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .pulse, .weave, .t-intro::after, .words span { animation: none; }
+    .pill:hover, .t-project:hover, .t-stat:hover { transform: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .section-title::before { transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+}
+a:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+</style>
+</head>
+<body>
+<div class="weave" aria-hidden="true"></div>
+
+<div class="page">
+    <header class="top">
+        <a class="brand" href="#"><span class="mark">EO</span>Erwan Oubda</a>
+        <nav aria-label="Navigation principale">
+            <a href="#projets">Projets</a>
+            <a href="#montage">Montage vidéo</a>
+            <a href="#parcours">Parcours</a>
+            <a href="#expertise">Expertise</a>
+        </nav>
+        <a class="cta" href="#contact">Me contacter</a>
+    </header>
+
+    <main>
+        <section class="bento" aria-label="Présentation">
+            <div class="tile t-intro">
+                <div>
+                    <span class="label">Ingénieur informatique · Monteur vidéo · Burkina Faso</span>
+                    <h1>Je code des solutions <span class="y">utiles</span>, ici et pour le monde.</h1>
                     <p>
-                        Avec une base technique solide acquise à travers mes projets académiques et professionnels,
-                        je me spécialise dans le développement d'applications web performantes. <strong>Autonome et
-                            rigoureux</strong>,
-                        j'aime relever des défis techniques et transformer des idées en produits fonctionnels.
+                        Je m'appelle Erwan Oubda. Je conçois des applications web avec Laravel, React et PostgreSQL,
+                        de l'analyse UML jusqu'à la mise en ligne, comme la plateforme nationale des patronymes du Burkina Faso.
+                        Je suis aussi monteur vidéo pour des créateurs YouTube.
                     </p>
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <div>
-                                <h4>Formation</h4>
-                                <p>Master en Systèmes d'Information</p>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-briefcase"></i>
-                            <div>
-                                <h4>Expérience</h4>
-                                <p>3+ années de projets & stages</p>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-certificate"></i>
-                            <div>
-                                <h4>Certifications</h4>
-                                <p>Google, IBM, DeepLearning.AI</p>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Localisation</h4>
-                                <p>Ouagadougou, Burkina Faso</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="15">15</div>
-                        <div class="stat-label">Projets Réalisés</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="3">3</div>
-                        <div class="stat-label">Stages Professionnels</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="12">12</div>
-                        <div class="stat-label">Certifications</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="8">8</div>
-                        <div class="stat-label">Technologies Maîtrisées</div>
-                    </div>
+                <div class="row">
+                    <a class="pill yellow" href="#projets">Voir mes projets →</a>
+                    <a class="pill ghost" href="./static/media/CV%20Erwan%20OUBDA%202026.2f3997321739e8779cd7.pdf" download>Télécharger le CV</a>
                 </div>
             </div>
+
+            <div class="tile t-status">
+                <span class="label">Disponibilité</span>
+                <strong><span class="pulse" aria-hidden="true"></span>Ouvert aux opportunités</strong>
+                <p>Stage, mission freelance ou CDI. Actuellement stagiaire IT chez Nere Mining.</p>
+            </div>
+
+            <div class="tile t-place">
+                <span class="label">Basé à</span>
+                <div class="city">Ouagadougou</div>
+                <div class="clock">Il est <span id="clock">--:--</span> ici</div>
+                <div class="sun" aria-hidden="true"></div>
+            </div>
+
+            <div class="tile t-stat"><b>3</b><span class="label">Expériences en entreprise</span></div>
+            <div class="tile t-stat"><b>6</b><span class="label">Projets présentés</span></div>
+            <div class="tile t-stat"><b>3</b><span class="label">Certifications</span></div>
+            <div class="tile t-stat"><b>277 k</b><span class="label">Vues sur mes montages</span></div>
+        </section>
+
+        <div class="section-title" id="projets">
+            <h2>Projets</h2>
+            <p>Du site corporatif à la plateforme nationale, en passant par des applications de gestion.</p>
         </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">PARCOURS</span>
-                <h2 class="section-title">Expérience Professionnelle</h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker current"></div>
-                    <div class="timeline-content featured-experience">
-                        <div class="timeline-date current-position">
-                            <i class="fas fa-briefcase"></i> En cours - Depuis 2026
-                        </div>
-                        <h3>Stagiaire IT</h3>
-                        <h4>
-                            <a href="https://www.nere-mining.bf/" target="_blank" rel="noopener noreferrer"
-                                class="company-link">
-                                Nere Mining <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </h4>
-                        <p>Support technique et développement de solutions informatiques pour l'entreprise minière</p>
-                        <ul class="timeline-tasks">
-                            <li><i class="fas fa-check"></i>Support technique aux utilisateurs et maintenance systèmes
-                            </li>
-                            <li><i class="fas fa-check"></i>Développement d'applications web internes</li>
-                            <li><i class="fas fa-check"></i>Gestion de l'infrastructure IT et des bases de données</li>
-                            <li><i class="fas fa-check"></i>Automatisation de processus et optimisation</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span class="tag">Support IT</span>
-                            <span class="tag">Développement Web</span>
-                            <span class="tag">Infrastructure</span>
-                            <span class="tag">Bases de données</span>
-                        </div>
-                    </div>
+        <section class="bento" aria-label="Projets">
+            <article class="tile t-project wide">
+                <div class="media">
+                    <span class="tag">En ligne</span>
+                    <img src="./assets/projects/patronymes.webp" alt="Page d'accueil de la plateforme Patronymes BF" loading="lazy" width="1200" height="750">
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Juillet - Septembre 2025</div>
-                        <h3>Analyste-développeur IT</h3>
-                        <h4>Ministère de la Communication, de la Culture, des Arts et du Tourisme</h4>
-                        <p>Conception et mise en place d'une plateforme de répertoire des patronymes du Burkina Faso</p>
-                        <ul class="timeline-tasks">
-                            <li><i class="fas fa-check"></i>Analyse des besoins et modélisation UML</li>
-                            <li><i class="fas fa-check"></i>Création du cahier des charges complet</li>
-                            <li><i class="fas fa-check"></i>Développement backend et gestion de base de données</li>
-                            <li><i class="fas fa-check"></i>Optimisation des performances et documentation technique
-                            </li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span class="tag">Laravel</span>
-                            <span class="tag">PHP</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">UML</span>
-                        </div>
-                    </div>
+                <div class="content">
+                    <span class="label">Développeur web · Ministère · 2025</span>
+                    <h3>Le répertoire des patronymes du Burkina Faso</h3>
+                    <p>Origine, signification, histoire et totem des noms de famille, avec recherche, contributions validées et gestion des rôles.</p>
+                    <div class="chips"><span>Laravel</span><span>PostgreSQL</span><span>Livewire</span><span>UML</span></div>
+                    <a class="go" href="https://patronymes-project.vercel.app" target="_blank" rel="noopener noreferrer">Visiter la plateforme ↗</a>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Juin 2024</div>
-                        <h3>Développeur - Système de Gestion Hôtelière</h3>
-                        <h4>Projet Académique - Université Aube Nouvelle</h4>
-                        <p>Développement d'une application web complète de gestion hôtelière</p>
-                        <ul class="timeline-tasks">
-                            <li><i class="fas fa-check"></i>Système d'authentification sécurisé</li>
-                            <li><i class="fas fa-check"></i>Gestion des chambres et réservations</li>
-                            <li><i class="fas fa-check"></i>Module de reporting et statistiques</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span class="tag">PHP</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Juillet - Septembre 2023</div>
-                        <h3>Stagiaire - Documentation Logicielle</h3>
-                        <h4>MAS Distribution</h4>
-                        <p>Rédaction et organisation de la documentation technique de l'entreprise</p>
-                        <ul class="timeline-tasks">
-                            <li><i class="fas fa-check"></i>Rédaction de documentations techniques</li>
-                            <li><i class="fas fa-check"></i>Appui à la digitalisation des processus internes</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span class="tag">Documentation</span>
-                            <span class="tag">Digitalisation</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Juillet - Septembre 2023</div>
-                        <h3>Développeur - Système de Gestion des PDI</h3>
-                        <h4>Projet Académique - Université Aube Nouvelle</h4>
-                        <p>Système de gestion des personnes déplacées internes</p>
-                        <ul class="timeline-tasks">
-                            <li><i class="fas fa-check"></i>Analyse et conception du système</li>
-                            <li><i class="fas fa-check"></i>Développement complet de l'application</li>
-                            <li><i class="fas fa-check"></i>Présentation finale et rapport technique</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span class="tag">PHP</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">MERISE</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">RÉALISATIONS</span>
-                <h2 class="section-title">Projets Principaux</h2>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card featured">
-                    <div class="project-image">
-                        <img src="./assets/projects/nere-mining.webp" width="1200" height="750" loading="lazy"
-                            alt="Page d'accueil du site Nere Mining : vue aérienne d'une mine et chiffres clés de l'entreprise">
-                        <div class="project-overlay">
-                            <a href="https://www.nere-mining.bf/" target="_blank" rel="noopener noreferrer"
-                                class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tag featured-tag">Projet Professionnel</div>
-                        <h3>Nere Mining - Site Web Corporatif</h3>
-                        <p>
-                            Site web corporatif pour Nere Mining, entreprise minière au Burkina Faso.
-                            Solution moderne et professionnelle présentant les activités, valeurs et réalisations de
-                            l'entreprise.
-                        </p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Responsive</span>
-                            <span>SEO</span>
-                            <span>CMS</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="./assets/projects/patronymes.webp" width="1200" height="750" loading="lazy"
-                            alt="Page d'accueil de la plateforme Patronymes BF : 71 patronymes, 13 régions, 19 groupes ethniques">
-                        <div class="project-overlay">
-                            <a href="https://patronymes-project.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Voir la plateforme des patronymes en ligne">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Plateforme Répertoire des Patronymes</h3>
-                        <p>
-                            Plateforme complète de répertoire des patronymes du Burkina Faso développée pour le
-                            Ministère de la Communication. Solution incluant l'analyse UML et l'architecture Laravel
-                            optimisée.
-                        </p>
-                        <div class="project-tech">
-                            <span>Laravel</span>
-                            <span>PHP</span>
-                            <span>MySQL</span>
-                            <span>UML</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="./assets/projects/gestion-hoteliere.webp" width="1200" height="750" loading="lazy"
-                            alt="Maquette du tableau de bord de gestion hôtelière : réservations récentes, chambres disponibles et occupation par type de chambre">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tag">Projet académique · Maquette</div>
-                        <h3>Système de Gestion Hôtelière</h3>
-                        <p>
-                            Application web complète pour la gestion d'hôtel incluant authentification,
-                            gestion des chambres, système de réservations et module de reporting.
-                        </p>
-                        <div class="project-tech">
-                            <span>PHP</span>
-                            <span>MySQL</span>
-                            <span>JavaScript</span>
-                            <span>Bootstrap</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="./assets/projects/gestion-pdi.webp" width="1200" height="750" loading="lazy"
-                            alt="Maquette du tableau de bord de suivi des PDI : derniers ménages enregistrés et répartition par région d'origine">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tag">Projet académique · Maquette</div>
-                        <h3>Système de Gestion des PDI</h3>
-                        <p>
-                            Système de gestion des personnes déplacées internes avec modules d'enregistrement,
-                            suivi et génération de rapports statistiques.
-                        </p>
-                        <div class="project-tech">
-                            <span>PHP</span>
-                            <span>MySQL</span>
-                            <span>MERISE</span>
-                            <span>Bootstrap</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">FORMATION CONTINUE</span>
-                <h2 class="section-title">Certifications Professionnelles</h2>
-            </div>
-            <div class="certifications-grid">
-                <div class="cert-card google">
-                    <div class="cert-header">
-                        <div class="cert-logo">
-                            <i class="fab fa-google"></i>
-                        </div>
-                        <div class="cert-badge">9 Cours</div>
-                    </div>
-                    <h3>Google Cybersecurity Professional Certificate</h3>
-                    <p class="cert-issuer">Émis par Google via Coursera</p>
-                    <p class="cert-description">
-                        Formation complète en cybersécurité couvrant Python, Linux, SQL, outils SIEM,
-                        systèmes de détection d'intrusion (IDS), et techniques d'identification et
-                        de mitigation des risques et vulnérabilités.
+            </article>
+            <article class="tile t-project wide">
+                <div class="content">
+                    <span class="label">Nere Mining · 2026</span>
+                    <h3>L'intranet d'une entreprise minière</h3>
+                    <p>
+                        Portail par département, tickets IT avec SLA en heures ouvrées et priorité calculée (impact × urgence),
+                        congés validés par le manager, base de connaissances et menu de la cantine.
+                        La démo publique reprend cette logique avec une entreprise et des données fictives.
                     </p>
-                    <div class="cert-skills">
-                        <span><i class="fas fa-shield-alt"></i> Python</span>
-                        <span><i class="fas fa-shield-alt"></i> Linux</span>
-                        <span><i class="fas fa-shield-alt"></i> SQL</span>
-                        <span><i class="fas fa-shield-alt"></i> SIEM</span>
-                        <span><i class="fas fa-shield-alt"></i> IDS</span>
-                    </div>
-                    <div class="cert-footer">
-                        <span class="cert-date"><i class="far fa-calendar"></i> Juillet 2026</span>
-                        <a href="https://coursera.org/verify/professional-cert/2Q1LSTHAHANE" target="_blank"
-                            rel="noopener noreferrer" class="cert-verify">
-                            Vérifier <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
+                    <div class="chips"><span>Laravel</span><span>Livewire</span><span>PostgreSQL</span><span>Active Directory</span><span>Tailwind</span></div>
+                    <a class="go" href="https://minexa-intranet-demo.vercel.app" target="_blank" rel="noopener noreferrer">Essayer la démo ↗</a>
                 </div>
+                <div class="media">
+                    <span class="tag">Démo en ligne</span>
+                    <img src="./assets/projects/intranet.webp" alt="Démo de l'intranet : tableau de bord d'une employée avec ses tickets, ses congés et les annonces" loading="lazy" width="1200" height="750">
+                </div>
+            </article>
+            <article class="tile t-project">
+                <div class="media">
+                    <img src="./assets/projects/memorial-sankara.webp" alt="Page d'accueil du site du Mémorial Thomas Sankara" loading="lazy" width="1200" height="750">
+                </div>
+                <div class="content">
+                    <span class="label">Développeur web · Ministère · 2025</span>
+                    <h3>Le site du Mémorial Thomas Sankara</h3>
+                    <p>Participation au site officiel du Mémorial : actualités, médiathèque, visites et campagne « Ma brique pour Sankara ».</p>
+                    <div class="chips"><span>WordPress</span><span>Elementor</span><span>Multilingue</span></div>
+                    <a class="go" href="https://memorialsankara.bf/" target="_blank" rel="noopener noreferrer">Voir le site ↗</a>
+                </div>
+            </article>
+            <article class="tile t-project">
+                <div class="media">
+                    <img src="./assets/projects/nere-mining.webp" alt="Page d'accueil du site Nere Mining" loading="lazy" width="1200" height="750">
+                </div>
+                <div class="content">
+                    <span class="label">Professionnel · 2026</span>
+                    <h3>Nere Mining</h3>
+                    <p>Le site corporatif d'une entreprise minière burkinabè.</p>
+                    <div class="chips"><span>React</span><span>SEO</span><span>CMS</span></div>
+                    <a class="go" href="https://www.nere-mining.bf/" target="_blank" rel="noopener noreferrer">Voir le site ↗</a>
+                </div>
+            </article>
+            <article class="tile t-project">
+                <div class="media">
+                    <span class="tag">Maquette</span>
+                    <img src="./assets/projects/gestion-hoteliere.webp" alt="Maquette du tableau de bord de gestion hôtelière" loading="lazy" width="1200" height="750">
+                </div>
+                <div class="content">
+                    <span class="label">Académique · 2024</span>
+                    <h3>Gestion hôtelière</h3>
+                    <p>Chambres, réservations, check-in, facturation et reporting.</p>
+                    <div class="chips"><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div>
+                </div>
+            </article>
+            <article class="tile t-project">
+                <div class="media">
+                    <span class="tag">Maquette</span>
+                    <img src="./assets/projects/gestion-pdi.webp" alt="Maquette du tableau de bord de suivi des PDI" loading="lazy" width="1200" height="750">
+                </div>
+                <div class="content">
+                    <span class="label">Académique · 2023</span>
+                    <h3>Suivi des PDI</h3>
+                    <p>Enregistrement des ménages déplacés, suivi par site et statistiques.</p>
+                    <div class="chips"><span>MERISE</span><span>Conception</span></div>
+                </div>
+            </article>
+            <article class="tile t-project" style="background:var(--sand);justify-content:center;grid-column:span 12">
+                <div class="content" style="justify-content:center">
+                    <span class="label">Et ensuite ?</span>
+                    <h3>Votre projet, peut-être.</h3>
+                    <p>Une application à concevoir, un outil interne à moderniser, une plateforme à mettre en ligne : parlons-en.</p>
+                    <a class="go" href="#contact">Démarrer la conversation →</a>
+                </div>
+            </article>
+        </section>
 
-                <div class="cert-card ibm">
-                    <div class="cert-header">
-                        <div class="cert-logo">
-                            <i class="fab fa-product-hunt"></i>
-                        </div>
-                        <div class="cert-badge">Coursera</div>
-                    </div>
-                    <h3>Introduction to Data Engineering</h3>
-                    <p class="cert-issuer">Émis par IBM via Coursera</p>
-                    <p class="cert-description">
-                        Formation sur les fondamentaux de l'ingénierie des données, incluant
-                        les pipelines de données, l'architecture ETL, et les meilleures pratiques
-                        pour la gestion et le traitement de données à grande échelle.
+        <div class="section-title" id="montage">
+            <h2>Montage vidéo</h2>
+            <p>En parallèle du développement, je monte des vidéos pour des créateurs YouTube francophones.</p>
+        </div>
+        <section class="bento" aria-label="Montage vidéo">
+            <article class="tile t-video">
+                <div class="content">
+                    <span class="label">Activité indépendante · WHO AMi</span>
+                    <h3>Des vidéos qui retiennent l'attention jusqu'à la dernière seconde.</h3>
+                    <p>
+                        Montage YouTube long, recap d'anime et de séries, gaming, Shorts et TikTok :
+                        rythme, hook, sound design, color grading et sous-titres dynamiques, dans le style de chaque chaîne.
                     </p>
-                    <div class="cert-skills">
-                        <span><i class="fas fa-database"></i> Data Pipelines</span>
-                        <span><i class="fas fa-database"></i> ETL</span>
-                        <span><i class="fas fa-database"></i> Big Data</span>
+                    <div class="figures">
+                        <div><b>277,9 k</b><span>vues sur mes montages</span></div>
+                        <div><b>6</b><span>chaînes clientes</span></div>
+                        <div><b>761 k</b><span>abonnés cumulés</span></div>
                     </div>
-                    <div class="cert-footer">
-                        <span class="cert-date"><i class="far fa-calendar"></i> Mai 2026</span>
-                        <a href="https://coursera.org/verify/T7UJD5USE37N" target="_blank" rel="noopener noreferrer"
-                            class="cert-verify">
-                            Vérifier <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
+                    <div class="chips"><span>Premiere Pro</span><span>After Effects</span><span>CapCut</span><span>Sound design</span><span>Color grading</span><span>Motion design</span></div>
+                    <a class="go" href="https://whoami-montage.vercel.app/" target="_blank" rel="noopener noreferrer">Voir mon portfolio de montage ↗</a>
                 </div>
-
-                <div class="cert-card deeplearning">
-                    <div class="cert-header">
-                        <div class="cert-logo">
-                            <i class="fas fa-brain"></i>
+                <div class="media editor" role="img" aria-label="Illustration : une timeline de montage vidéo avec pistes vidéo, titres et audio">
+                    <div class="monitor" aria-hidden="true">
+                        <div class="screen">
+                            <span class="rec">● REC</span>
+                            <span class="fmt">16:9 · 4K · 60 i/s</span>
+                            <div class="safe"></div>
+                            <div class="words"><span>RECAP</span><span>GAMING</span><span>SHORTS</span></div>
                         </div>
-                        <div class="cert-badge">Coursera</div>
+                        <div class="transport">
+                            <span class="tc" id="timecode">00:00:00:00</span>
+                            <span>⏮ ▶ ⏭</span>
+                            <span>Séquence finale</span>
+                        </div>
                     </div>
-                    <h3>L'IA pour tous</h3>
-                    <p class="cert-issuer">Émis par DeepLearning.AI via Coursera</p>
-                    <p class="cert-description">
-                        Introduction complète à l'intelligence artificielle et au machine learning.
-                        Comprendre les concepts fondamentaux de l'IA, son impact sur la société,
-                        et comment l'intégrer dans des projets réels.
-                    </p>
-                    <div class="cert-skills">
-                        <span><i class="fas fa-robot"></i> Intelligence Artificielle</span>
-                        <span><i class="fas fa-robot"></i> Machine Learning</span>
-                        <span><i class="fas fa-robot"></i> Deep Learning</span>
+                    <div class="timeline" id="timeline" aria-hidden="true">
+                        <div class="ruler"></div>
+                        <div class="track"><span class="lbl">T1</span><div class="lane">
+                            <i class="clip c-title" style="left:2%;width:14%">Hook</i>
+                            <i class="clip c-title" style="left:40%;width:18%">Sous-titres</i>
+                            <i class="clip c-fx" style="left:76%;width:12%">Mème</i>
+                        </div></div>
+                        <div class="track"><span class="lbl">V1</span><div class="lane">
+                            <i class="clip c-video" style="left:0;width:20%">Intro</i>
+                            <i class="clip c-alt" style="left:20.5%;width:27%">B-roll</i>
+                            <i class="clip c-video" style="left:48%;width:30%">Gameplay</i>
+                            <i class="clip c-alt" style="left:78.5%;width:21.5%">Outro</i>
+                        </div></div>
+                        <div class="track"><span class="lbl">A1</span><div class="lane">
+                            <i class="clip c-voice wave" style="left:0;width:72%">Voix off</i>
+                            <i class="clip c-fx" style="left:74%;width:8%">SFX</i>
+                        </div></div>
+                        <div class="track"><span class="lbl">A2</span><div class="lane">
+                            <i class="clip c-music wave" style="left:0;width:100%">Musique</i>
+                        </div></div>
+                        <div class="playhead" id="playhead"></div>
                     </div>
-                    <div class="cert-footer">
-                        <span class="cert-date"><i class="far fa-calendar"></i> Mai 2026</span>
-                        <a href="https://coursera.org/verify/51651VAWDYVA" target="_blank" rel="noopener noreferrer"
-                            class="cert-verify">
-                            Vérifier <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
+                    <span class="tag">Recap · Gaming · Shorts</span>
                 </div>
-            </div>
+            </article>
+        </section>
+
+        <div class="section-title" id="parcours">
+            <h2>Parcours</h2>
+            <p>Trois expériences en entreprise et des projets académiques menés de bout en bout.</p>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">EXPERTISE</span>
-                <h2 class="section-title">Compétences Techniques</h2>
+        <section class="path" aria-label="Parcours">
+            <div class="step now">
+                <time>Depuis 2026</time>
+                <div><h3>Stagiaire IT</h3><div class="org">Nere Mining · intranet, support, applications internes, bases de données</div></div>
+                <span class="kind">En cours</span>
             </div>
-            <div class="tech-sphere" id="techSphere" aria-hidden="true">
-                <span class="tech-tag">Laravel</span>
-                <span class="tech-tag">PHP</span>
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Java</span>
-                <span class="tech-tag">C/C++</span>
-                <span class="tech-tag">HTML</span>
-                <span class="tech-tag">CSS</span>
-                <span class="tech-tag">MySQL</span>
-                <span class="tech-tag">PostgreSQL</span>
-                <span class="tech-tag">SQL</span>
-                <span class="tech-tag">Git</span>
-                <span class="tech-tag">GitHub</span>
-                <span class="tech-tag">Linux</span>
-                <span class="tech-tag">UML</span>
-                <span class="tech-tag">MERISE</span>
-                <span class="tech-tag">Bootstrap</span>
-                <span class="tech-tag">SIEM</span>
-                <span class="tech-tag">2TUP</span>
+            <div class="step">
+                <time>2025</time>
+                <div><h3>Développeur web</h3><div class="org">Ministère de la Communication, de la Culture, des Arts et du Tourisme · patronymes, Mémorial Thomas Sankara</div></div>
+                <span class="kind">Développeur</span>
             </div>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-code"></i>
-                        <h3>Développement Backend</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Laravel</span>
-                                <span class="skill-level">Avancé</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">PHP</span>
-                                <span class="skill-level">Avancé</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="88"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Python</span>
-                                <span class="skill-level">Intermédiaire</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Java</span>
-                                <span class="skill-level">Intermédiaire</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="70"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">C/C++</span>
-                                <span class="skill-level">Intermédiaire</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="68"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-laptop-code"></i>
-                        <h3>Développement Frontend</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">React</span>
-                                <span class="skill-level">Avancé</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">JavaScript</span>
-                                <span class="skill-level">Avancé</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="82"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">HTML/CSS</span>
-                                <span class="skill-level">Expert</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-database"></i>
-                        <h3>Bases de Données</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">MySQL</span>
-                                <span class="skill-level">Avancé</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="87"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">PostgreSQL</span>
-                                <span class="skill-level">Avancé</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">SQL</span>
-                                <span class="skill-level">Avancé</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="88"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-tools"></i>
-                        <h3>Outils & Méthodologies</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Git / GitHub</span>
-                                <span class="skill-level">Avancé</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="83"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">UML / MERISE</span>
-                                <span class="skill-level">Avancé</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Linux</span>
-                                <span class="skill-level">Intermédiaire</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="72"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Méthodologie 2TUP</span>
-                                <span class="skill-level">Avancé</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="78"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-film"></i>
-                        <h3>Montage vidéo</h3>
-                    </div>
-                    <p>Montage narratif, étalonnage colorimétrique, motion design et sound design.</p>
-                    <div class="project-tech">
-                        <span>Premiere Pro</span>
-                        <span>DaVinci Resolve</span>
-                        <span>After Effects</span>
-                        <span>Audition</span>
-                    </div>
-                    <a href="https://whoamiportfolio.base44.app/" target="_blank" rel="noopener noreferrer"
-                        class="btn btn-secondary">
-                        <span>Voir mon portfolio vidéo</span>
-                        <i class="fas fa-arrow-up-right-from-square"></i>
-                    </a>
-                </div>
+            <div class="step">
+                <time>2024</time>
+                <div><h3>Système de gestion hôtelière</h3><div class="org">Université Aube Nouvelle</div></div>
+                <span class="kind">Projet académique</span>
             </div>
-
-            <div class="languages">
-                <h3 class="languages-title"><i class="fas fa-language"></i> Langues</h3>
-                <div class="languages-grid">
-                    <div class="language-item">
-                        <span class="language-name">Français</span>
-                        <span class="language-level">Courant</span>
-                    </div>
-                    <div class="language-item">
-                        <span class="language-name">Anglais</span>
-                        <span class="language-level">Intermédiaire</span>
-                    </div>
-                    <div class="language-item">
-                        <span class="language-name">Mooré</span>
-                        <span class="language-level">Courant</span>
-                    </div>
-                </div>
+            <div class="step">
+                <time>2023</time>
+                <div><h3>Documentation logicielle</h3><div class="org">MAS Distribution</div></div>
+                <span class="kind">Stage</span>
             </div>
+            <div class="step">
+                <time>2023</time>
+                <div><h3>Système de gestion des PDI</h3><div class="org">Université Aube Nouvelle</div></div>
+                <span class="kind">Projet académique</span>
+            </div>
+        </section>
+
+        <div class="section-title" id="expertise">
+            <h2>Expertise</h2>
+            <p>Du code à la vidéo : ce que j'utilise au quotidien, et ce que j'apprends en continu.</p>
         </div>
-    </section>
-
-    <!-- CV Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">CONTACTEZ-MOI</span>
-                <h2 class="section-title">Travaillons Ensemble</h2>
-                <p class="section-description">
-                    Je suis actuellement disponible pour des opportunités de stage, de freelance ou de CDI.
-                    N'hésitez pas à me contacter !
-                </p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h4>Email</h4>
-                        <a href="mailto:erwanoubda_tech@icloud.com">erwanoubda_tech@icloud.com</a>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h4>Téléphone</h4>
-                        <a href="tel:+22666488928">+226 66 48 89 28</a>
-                        <a href="tel:+22651630546">+226 51 63 05 46</a>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h4>Localisation</h4>
-                        <p>Ouagadougou<br>Burkina Faso</p>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-link"></i>
-                        </div>
-                        <h4>Réseaux Sociaux</h4>
-                        <div class="contact-social">
-                            <a href="https://github.com/erwanoubda" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                            <a href="https://www.linkedin.com/in/wendnongdo-erwan-oubda-a9b062359" target="_blank"
-                                rel="noopener noreferrer">
-                                <i class="fab fa-linkedin"></i> LinkedIn
-                            </a>
-                        </div>
-                    </div>
+        <section class="bento" aria-label="Compétences et certifications">
+            <div class="tile t-skills">
+                <span class="label">Compétences</span>
+                <div class="skill-row">
+                    <h3>Au quotidien</h3>
+                    <div class="chips"><span class="hot">Laravel</span><span class="hot">PHP</span><span class="hot">React</span><span class="hot">PostgreSQL</span><span>MySQL</span><span>JavaScript</span></div>
                 </div>
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">
-                                <i class="fas fa-user"></i> Nom complet
-                            </label>
-                            <input type="text" id="name" name="name" required placeholder="Votre nom">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">
-                                <i class="fas fa-envelope"></i> Email
-                            </label>
-                            <input type="email" id="email" name="email" required placeholder="votre@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">
-                                <i class="fas fa-tag"></i> Sujet
-                            </label>
-                            <input type="text" id="subject" name="subject" required placeholder="Sujet du message">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">
-                                <i class="fas fa-comment"></i> Message
-                            </label>
-                            <textarea id="message" name="message" rows="5" required
-                                placeholder="Votre message..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-submit">
-                            <span>Envoyer le Message</span>
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
+                <div class="skill-row">
+                    <h3>Aussi</h3>
+                    <div class="chips"><span>Python</span><span>Java</span><span>C / C++</span><span>Linux</span><span>Git</span><span>HTML / CSS</span></div>
+                </div>
+                <div class="skill-row">
+                    <h3>Montage vidéo</h3>
+                    <div class="chips"><span class="hot">Premiere Pro</span><span>After Effects</span><span>CapCut</span><span>Sound design</span><span>Color grading</span><span>Motion design</span></div>
+                </div>
+                <div class="skill-row">
+                    <h3>Méthodes</h3>
+                    <div class="chips"><span>UML</span><span>MERISE</span><span>2TUP</span><span>Cahier des charges</span></div>
+                </div>
+                <div class="skill-row">
+                    <h3>Langues</h3>
+                    <div class="chips"><span>Français · courant</span><span>Mooré · courant</span><span>Anglais · intermédiaire</span></div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>ERWAN<span>.</span></h3>
-                    <p>Ingénieur Informatique</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="#home">Accueil</a></li>
-                        <li><a href="#about">À propos</a></li>
-                        <li><a href="#experience">Expérience</a></li>
-                        <li><a href="#projects">Projets</a></li>
-                        <li><a href="#certifications">Certifications</a></li>
-                        <li><a href="#skills">Compétences</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> erwanoubda_tech@icloud.com</li>
-                        <li><i class="fas fa-phone"></i> +226 66 48 89 28</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Ouagadougou, BF</li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4>Suivez-moi</h4>
-                    <div class="social-links">
-                        <a href="https://github.com/erwanoubda" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/wendnongdo-erwan-oubda-a9b062359" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:erwanoubda_tech@icloud.com">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
+            <div class="tile t-certs">
+                <span class="label">Certifications vérifiables</span>
+                <a class="cert" href="https://coursera.org/verify/professional-cert/2Q1LSTHAHANE" target="_blank" rel="noopener noreferrer">
+                    <b>Google Cybersecurity Professional Certificate ↗</b><span>Google · juillet 2026 · 9 cours</span>
+                </a>
+                <a class="cert" href="https://coursera.org/verify/T7UJD5USE37N" target="_blank" rel="noopener noreferrer">
+                    <b>Introduction to Data Engineering ↗</b><span>IBM · mai 2026</span>
+                </a>
+                <a class="cert" href="https://coursera.org/verify/51651VAWDYVA" target="_blank" rel="noopener noreferrer">
+                    <b>L'IA pour tous ↗</b><span>DeepLearning.AI · mai 2026</span>
+                </a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Erwan Oubda. Tous droits réservés.</p>
-                <p>Conçu & Développé avec <i class="fas fa-heart"></i> par Erwan</p>
+        </section>
+
+        <section class="contact" id="contact">
+            <span class="label" style="color:rgba(255,255,255,.75)">Contact</span>
+            <h2>Construisons quelque chose ensemble.</h2>
+            <a class="mail" href="mailto:erwanoubda_tech@icloud.com">erwanoubda_tech@icloud.com</a>
+            <div class="links">
+                <a href="tel:+22666488928">+226 66 48 89 28</a>
+                <a href="https://www.linkedin.com/in/wendnongdo-erwan-oubda-a9b062359" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                <a href="https://github.com/ERWANS2003" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                <a href="https://whoami-montage.vercel.app/" target="_blank" rel="noopener noreferrer">Portfolio montage ↗</a>
+                <span>Discord : erwanstech</span>
             </div>
-        </div>
-    </footer>
+        </section>
+    </main>
 
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scrollTop">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <footer>Conçu et développé par Erwan Oubda · Ouagadougou · 2026</footer>
+</div>
+<div class="weave thin" aria-hidden="true"></div>
 
-    <script src="./script.js"></script>
-    <script src="./effects3d.js"></script>
-    <script type="module" src="./scene3d.js"></script>
+<script>
+    // Heure locale de Ouagadougou (GMT, sans heure d'été)
+    const clock = document.getElementById('clock');
+    const tick = () => {
+        clock.textContent = new Intl.DateTimeFormat('fr-FR', {
+            hour: '2-digit', minute: '2-digit', timeZone: 'Africa/Ouagadougou'
+        }).format(new Date());
+    };
+    tick();
+    setInterval(tick, 30000);
+
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Apparition des blocs au défilement, en cascade dans chaque groupe
+    const revealables = document.querySelectorAll('.bento > .tile, .step, .section-title, .contact');
+    revealables.forEach((el) => {
+        el.classList.add('reveal');
+        const siblings = [...el.parentElement.children].filter((c) => c.classList.contains('reveal'));
+        el.style.setProperty('--d', `${Math.min(siblings.indexOf(el), 6) * 0.08}s`);
+    });
+
+    // Compteurs : les chiffres montent jusqu'à leur valeur
+    const countUp = (el) => {
+        const match = el.textContent.trim().match(/^([\d.,]+)(.*)$/);
+        if (!match) return;
+        const target = parseFloat(match[1].replace(',', '.'));
+        const decimals = (match[1].split(/[.,]/)[1] || '').length;
+        const suffix = match[2];
+        const start = performance.now();
+        const step = (now) => {
+            const t = Math.min((now - start) / 1400, 1);
+            const value = target * (1 - Math.pow(1 - t, 3));
+            el.textContent = value.toFixed(decimals).replace('.', ',') + suffix;
+            if (t < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-visible');
+            if (!reduced) entry.target.querySelectorAll('.t-stat b, .figures b').forEach(countUp);
+            if (!reduced && entry.target.matches('.t-stat')) countUp(entry.target.querySelector('b'));
+            observer.unobserve(entry.target);
+        });
+    }, { threshold: 0.15 });
+    revealables.forEach((el) => (reduced ? el.classList.add('is-visible') : observer.observe(el)));
+
+    // En-tête : fond flouté dès qu'on quitte le haut de page
+    const header = document.querySelector('.top');
+    const onScroll = () => header.classList.toggle('is-stuck', scrollY > 24);
+    addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Accroche : le halo suit la souris
+    const intro = document.querySelector('.t-intro');
+    intro.addEventListener('pointermove', (e) => {
+        const r = intro.getBoundingClientRect();
+        intro.style.setProperty('--mx', `${((e.clientX - r.left) / r.width) * 100}%`);
+        intro.style.setProperty('--my', `${((e.clientY - r.top) / r.height) * 100}%`);
+    });
+
+    // Timeline de montage : la tête de lecture avance et le timecode suit
+    const timeline = document.getElementById('timeline');
+    const playhead = document.getElementById('playhead');
+    const timecode = document.getElementById('timecode');
+    const DURATION = 12000; // 12 s de lecture en boucle, à 30 images par seconde
+    let playing = false;
+    const frame = (now) => {
+        const t = (now % DURATION) / DURATION;
+        const width = timeline.clientWidth - 38 - 10;
+        playhead.style.setProperty('--ph', `${t * width}px`);
+        const seconds = t * 42; // la séquence fictive dure 42 s
+        const f = Math.floor((seconds % 1) * 30);
+        timecode.textContent = `00:00:${String(Math.floor(seconds)).padStart(2, '0')}:${String(f).padStart(2, '0')}`;
+        if (playing) requestAnimationFrame(frame);
+    };
+    if (reduced) {
+        frame(DURATION * 0.38); // image fixe : tête de lecture en plein montage
+    } else {
+        new IntersectionObserver(([entry]) => {
+            playing = entry.isIntersecting;
+            if (playing) requestAnimationFrame(frame);
+        }).observe(timeline);
+    }
+</script>
+<script src="./analytics.js"></script>
 </body>
-
 </html>
