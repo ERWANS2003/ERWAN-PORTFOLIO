@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page introuvable · Erwan Oubda</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/ERWAN-PORTFOLIO/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Page 404 aux couleurs du portfolio Faso Dan Fani */
+:root {
+    --cream: #f7f1e5;
+    --ink: #1d1a16;
+    --muted: #6b6255;
+    --yellow: #f4b819;
+    --red: #d6332f;
+    --indigo: #22306b;
+    --weave: repeating-linear-gradient(90deg,
+        #22306b 0 14px, #f7f1e5 14px 18px,
+        #d6332f 18px 30px, #f4b819 30px 34px,
+        #0c8a4c 34px 50px, #f7f1e5 50px 54px,
+        #22306b 54px 60px, #f4b819 60px 64px);
+}
+@media (prefers-color-scheme: dark) {
+    :root { --cream: #14110e; --ink: #f3ece0; --muted: #b3a796; }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+    display: grid;
+    place-items: center;
+    padding: 2rem 1.2rem;
+    font-family: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    text-align: center;
+}
+.weave { position: fixed; left: 0; right: 0; height: 14px; background: var(--weave); }
+.weave.top { top: 0; }
+.weave.bottom { bottom: 0; }
+.code { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(6rem, 22vw, 11rem); line-height: 0.9; letter-spacing: -0.05em; color: var(--indigo); }
+.code span { color: var(--yellow); }
+@media (prefers-color-scheme: dark) { .code { color: #9fb0ff; } }
+/* Un fil qui pend, comme sorti du tissage */
+.thread { width: 6px; height: 90px; margin: 0.6rem auto 0; border-radius: 3px; background: var(--weave); background-size: 6px 64px; transform-origin: top; animation: sway 3s ease-in-out infinite; }
+@keyframes sway { 50% { transform: rotate(6deg); } }
+h1 { margin-top: 1.4rem; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(1.6rem, 4vw, 2.4rem); letter-spacing: -0.02em; }
+p { max-width: 30rem; margin: 0.8rem auto 0; color: var(--muted); line-height: 1.6; }
+.actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem; margin-top: 1.8rem; }
+a { padding: 0.8rem 1.3rem; font-weight: 600; text-decoration: none; border-radius: 999px; }
+.primary { color: var(--ink-fixed, #1d1a16); background: var(--yellow); }
+.ghost { color: var(--ink); border: 1.5px solid currentColor; }
+a:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .thread { animation: none; } }
+</style>
+</head>
+<body>
+    <div class="weave top" aria-hidden="true"></div>
+    <main>
+        <div class="code" aria-hidden="true">4<span>0</span>4</div>
+        <div class="thread" aria-hidden="true"></div>
+        <h1>Ce fil s'est détaché du pagne.</h1>
+        <p>La page que vous cherchez n'existe pas ou a été déplacée. Revenez au portfolio pour découvrir mes projets.</p>
+        <div class="actions">
+            <a class="primary" href="/ERWAN-PORTFOLIO/">Retour au portfolio</a>
+            <a class="ghost" href="/ERWAN-PORTFOLIO/#contact">Me contacter</a>
+        </div>
+    </main>
+    <div class="weave bottom" aria-hidden="true"></div>
+</body>
+</html>
